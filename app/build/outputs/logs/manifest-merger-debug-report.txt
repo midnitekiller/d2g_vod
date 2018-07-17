@@ -1,0 +1,340 @@
+-- Merging decision tree log ---
+permission#com.example.android.tvleanback.ACCESS_VIDEO_DATA
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:20:5-22:47
+	android:protectionLevel
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:22:9-44
+	android:name
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:21:9-58
+permission#com.example.android.tvleanback.ACCESS_MOVIES_DATA
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:23:5-25:47
+	android:protectionLevel
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:25:9-44
+	android:name
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:24:9-59
+uses-permission#com.example.android.tvleanback.ACCESS_VIDEO_DATA
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:27:5-74
+	android:name
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:27:22-71
+uses-permission#com.example.android.tvleanback.ACCESS_MOVIES_DATA
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:28:5-75
+	android:name
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:28:22-72
+provider#com.example.android.tvleanback.data.VideoProvider
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:106:9-113:20
+	android:authorities
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:108:13-49
+	android:exported
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:109:13-36
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:107:13-47
+manifest
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:16:1-144:12
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:16:1-144:12
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:16:1-144:12
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:16:1-144:12
+MERGED from [com.android.support:preference-leanback-v17:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\preference-leanback-v17-27.1.0.aar\7c550080166935e6e645d9bbeca81c42\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:preference-v14:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\preference-v14-27.1.0.aar\0bda5ee5ed938ead218dd66984cbf30f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:preference-v7:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\preference-v7-27.1.0.aar\31e8b2b76bdb7158a1e97ef8afe90ed7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.exoplayer:extension-leanback:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\extension-leanback-2.6.1.aar\b24e9634e4e5377b80fcc15d4e4fd5cc\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:leanback-v17:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\leanback-v17-27.1.0.aar\5a60a749d082352ebdc4fedd4ba8d7a0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\2098ff5f5be20728d1fd25d43ae78563\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recommendation:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\recommendation-27.1.0.aar\2ea58c9b527216c4d88f5383e0556107\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.exoplayer:exoplayer:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-2.6.1.aar\3cab84bba204f8c9232f71728f8b7327\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:support-v4:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\2493a72a49de6c11cf126319f4de9be1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\a8c5f78492e911f9be6e1b8c7f2f14f1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\6156719e8484fa4652680c651cc8037e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\2fadef6faf6676a31cbfa44b2441c140\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\7e21047234252c000808855fc35d1507\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\8a8b91710691c88b70ccc5b853d9a972\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\35417a30a3fd93441dedb92766d1bcc1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\b2ba4e82d9461ae6e764a954d5e7c520\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\711a6d2f3c5dc5d26ea2b91c6963c842\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-dash-2.6.1.aar\327daa1097b1c81fe313db6f514dad86\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-hls-2.6.1.aar\67e0fc1e642e50fa20f1982c3d00ca6d\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.6.1.aar\4b9cb215a1e21d6a9a5120f197e288ef\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-ui-2.6.1.aar\413b1a6be1e9b1844d9cc454fbdf66e8\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-core-2.6.1.aar\04c78b840581e3567f8e0153b5a7fef6\AndroidManifest.xml:17:1-25:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\runtime-1.1.0.aar\69dde16f3bfd0340fb2c7a5bf4fa9977\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\497691e246be11e0776061a62d96f195\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\runtime-1.1.0.aar\05aa606d9ab49cabb949640d677bfe25\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\eb2e2951bd436c05770752bdd06c6dc6\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:16:1-144:12
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:16:1-144:12
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:16:1-144:12
+	package
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:18:5-45
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:16:1-144:12
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:17:5-51
+	android:versionCode
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:16:1-144:12
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:16:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:29:5-67
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:29:22-64
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:30:5-81
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:30:22-78
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:31:5-71
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:31:22-68
+uses-feature#android.hardware.microphone
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:33:5-35:36
+	android:required
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:35:9-33
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:34:9-51
+uses-feature#android.hardware.touchscreen
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:36:5-38:36
+	android:required
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:38:9-33
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:37:9-52
+uses-feature#android.software.leanback
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:39:5-41:35
+	android:required
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:41:9-32
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:40:9-49
+application
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:43:5-142:19
+	android:label
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:47:9-41
+	android:icon
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:46:9-50
+	android:allowBackup
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:44:9-36
+	android:banner
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:45:9-59
+	android:theme
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:49:9-46
+	android:logo
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:48:9-57
+activity#com.example.android.tvleanback.ui.MainActivity
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:50:9-62:20
+	android:screenOrientation
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:55:13-50
+	android:label
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:53:13-45
+	android:icon
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:52:13-61
+	android:theme
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:56:13-57
+	android:logo
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:54:13-61
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:51:13-44
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER+category:name:android.intent.category.LEANBACK_LAUNCHER
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:57:13-61:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:58:17-69
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:58:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:59:17-77
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:59:27-74
+category#android.intent.category.LEANBACK_LAUNCHER
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:60:17-86
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:60:27-83
+activity#com.example.android.tvleanback.mobile.MobileWelcomeActivity
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:64:9-70:20
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:64:19-63
+intent-filter#category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:65:13-69:29
+meta-data#android.app.default_searchable
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:72:9-73:56
+	android:value
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:73:13-53
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:72:20-65
+activity#com.example.android.tvleanback.ui.VideoDetailsActivity
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:74:9-89:20
+	android:exported
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:76:13-36
+	android:theme
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:77:13-58
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:75:13-52
+intent-filter#action:name:android.intent.action.SEARCH
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:80:13-83:29
+action#android.intent.action.SEARCH
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:81:17-71
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:81:25-68
+meta-data#android.app.searchable
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:86:13-88:54
+	android:resource
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:88:17-51
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:87:17-54
+activity#com.example.android.tvleanback.ui.PlaybackActivity
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:90:9-94:49
+	android:launchMode
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:93:13-44
+	android:resizeableActivity
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:94:13-46
+	android:configChanges
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:92:13-107
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:91:13-48
+activity#com.example.android.tvleanback.ui.VerticalGridActivity
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:95:9-99:66
+	android:parentActivityName
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:98:13-58
+	android:exported
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:97:13-36
+	android:theme
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:99:13-63
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:96:13-52
+activity#com.example.android.tvleanback.ui.SearchActivity
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:100:9-55
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:100:19-52
+activity#com.example.android.tvleanback.ui.GuidedStepActivity
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:101:9-103:72
+	android:theme
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:103:13-69
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:102:13-50
+receiver#com.example.android.tvleanback.recommendation.RecommendationReceiver
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:115:9-122:20
+	android:enabled
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:117:13-35
+	android:exported
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:118:13-37
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:116:13-66
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:119:13-121:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:120:17-79
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:120:25-76
+service#com.example.android.tvleanback.data.FetchVideoService
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:124:9-126:40
+	android:exported
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:126:13-37
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:125:13-51
+service#com.example.android.tvleanback.recommendation.UpdateRecommendationsService
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:127:9-129:38
+	android:enabled
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:129:13-35
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:128:13-72
+activity#com.example.android.tvleanback.ui.OnboardingActivity
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:131:9-134:64
+	android:enabled
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:132:13-35
+	android:exported
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:133:13-36
+	android:theme
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:134:13-61
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:131:19-56
+activity#com.example.android.tvleanback.ui.SettingsActivity
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:135:9-138:15
+	android:exported
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:136:13-36
+	android:theme
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:137:13-55
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:135:19-54
+activity#com.example.android.tvleanback.ui.AuthenticationActivity
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:139:9-141:72
+	android:theme
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:141:13-69
+	android:name
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:140:13-54
+uses-sdk
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:preference-leanback-v17:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\preference-leanback-v17-27.1.0.aar\7c550080166935e6e645d9bbeca81c42\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-leanback-v17:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\preference-leanback-v17-27.1.0.aar\7c550080166935e6e645d9bbeca81c42\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v14:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\preference-v14-27.1.0.aar\0bda5ee5ed938ead218dd66984cbf30f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v14:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\preference-v14-27.1.0.aar\0bda5ee5ed938ead218dd66984cbf30f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v7:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\preference-v7-27.1.0.aar\31e8b2b76bdb7158a1e97ef8afe90ed7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v7:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\preference-v7-27.1.0.aar\31e8b2b76bdb7158a1e97ef8afe90ed7\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.exoplayer:extension-leanback:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\extension-leanback-2.6.1.aar\b24e9634e4e5377b80fcc15d4e4fd5cc\AndroidManifest.xml:21:5-23:41
+MERGED from [com.google.android.exoplayer:extension-leanback:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\extension-leanback-2.6.1.aar\b24e9634e4e5377b80fcc15d4e4fd5cc\AndroidManifest.xml:21:5-23:41
+MERGED from [com.android.support:leanback-v17:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\leanback-v17-27.1.0.aar\5a60a749d082352ebdc4fedd4ba8d7a0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:leanback-v17:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\leanback-v17-27.1.0.aar\5a60a749d082352ebdc4fedd4ba8d7a0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\2098ff5f5be20728d1fd25d43ae78563\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\2098ff5f5be20728d1fd25d43ae78563\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recommendation:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\recommendation-27.1.0.aar\2ea58c9b527216c4d88f5383e0556107\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recommendation:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\recommendation-27.1.0.aar\2ea58c9b527216c4d88f5383e0556107\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.exoplayer:exoplayer:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-2.6.1.aar\3cab84bba204f8c9232f71728f8b7327\AndroidManifest.xml:21:5-23:41
+MERGED from [com.google.android.exoplayer:exoplayer:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-2.6.1.aar\3cab84bba204f8c9232f71728f8b7327\AndroidManifest.xml:21:5-23:41
+MERGED from [com.android.support:support-v4:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\2493a72a49de6c11cf126319f4de9be1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\2493a72a49de6c11cf126319f4de9be1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\a8c5f78492e911f9be6e1b8c7f2f14f1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\a8c5f78492e911f9be6e1b8c7f2f14f1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\6156719e8484fa4652680c651cc8037e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\6156719e8484fa4652680c651cc8037e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\2fadef6faf6676a31cbfa44b2441c140\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\2fadef6faf6676a31cbfa44b2441c140\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\7e21047234252c000808855fc35d1507\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\7e21047234252c000808855fc35d1507\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\8a8b91710691c88b70ccc5b853d9a972\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\8a8b91710691c88b70ccc5b853d9a972\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\35417a30a3fd93441dedb92766d1bcc1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\35417a30a3fd93441dedb92766d1bcc1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\b2ba4e82d9461ae6e764a954d5e7c520\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\b2ba4e82d9461ae6e764a954d5e7c520\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\711a6d2f3c5dc5d26ea2b91c6963c842\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\711a6d2f3c5dc5d26ea2b91c6963c842\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-dash-2.6.1.aar\327daa1097b1c81fe313db6f514dad86\AndroidManifest.xml:21:5-23:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-dash-2.6.1.aar\327daa1097b1c81fe313db6f514dad86\AndroidManifest.xml:21:5-23:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-hls-2.6.1.aar\67e0fc1e642e50fa20f1982c3d00ca6d\AndroidManifest.xml:21:5-23:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-hls-2.6.1.aar\67e0fc1e642e50fa20f1982c3d00ca6d\AndroidManifest.xml:21:5-23:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.6.1.aar\4b9cb215a1e21d6a9a5120f197e288ef\AndroidManifest.xml:21:5-23:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.6.1.aar\4b9cb215a1e21d6a9a5120f197e288ef\AndroidManifest.xml:21:5-23:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-ui-2.6.1.aar\413b1a6be1e9b1844d9cc454fbdf66e8\AndroidManifest.xml:21:5-23:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-ui-2.6.1.aar\413b1a6be1e9b1844d9cc454fbdf66e8\AndroidManifest.xml:21:5-23:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-core-2.6.1.aar\04c78b840581e3567f8e0153b5a7fef6\AndroidManifest.xml:21:5-23:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.6.1] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\exoplayer-core-2.6.1.aar\04c78b840581e3567f8e0153b5a7fef6\AndroidManifest.xml:21:5-23:41
+MERGED from [android.arch.lifecycle:runtime:1.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\runtime-1.1.0.aar\69dde16f3bfd0340fb2c7a5bf4fa9977\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\runtime-1.1.0.aar\69dde16f3bfd0340fb2c7a5bf4fa9977\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\497691e246be11e0776061a62d96f195\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\497691e246be11e0776061a62d96f195\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\runtime-1.1.0.aar\05aa606d9ab49cabb949640d677bfe25\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\runtime-1.1.0.aar\05aa606d9ab49cabb949640d677bfe25\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\eb2e2951bd436c05770752bdd06c6dc6\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] D:\Direct2Guests-Workstation\Lief Filez\ExoPlayer\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\eb2e2951bd436c05770752bdd06c6dc6\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml
+path-permission
+ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:110:13-112:77
+	android:readPermission
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:112:17-74
+	android:pathPrefix
+		ADDED from C:\Users\D2G\Desktop\D2G VOD Integration\app\src\main\AndroidManifest.xml:111:17-45
