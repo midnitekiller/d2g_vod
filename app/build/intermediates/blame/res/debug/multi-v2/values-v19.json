@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\D2G\\Desktop\\D2G VOD Integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v19\\values-v19.xml",
+            "outputFile": "C:\\Users\\D2G\\Desktop\\d2g_vod\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v19\\values-v19.xml",
             "map": [
                 {
-                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\leanback-v17-27.1.0.aar\\5a60a749d082352ebdc4fedd4ba8d7a0\\res\\values-v19\\values-v19.xml",
+                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\leanback-v17-27.0.0.aar\\2045e2bf9c2d5d562bd4efbe5c571f5b\\res\\values-v19\\values-v19.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

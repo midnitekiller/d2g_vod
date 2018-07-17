@@ -16,8 +16,8 @@
 -->
 
 <resources>
-    <string name="app_name"><![CDATA[VOD D2G]]></string>
-    <string name="browse_title"><![CDATA[VOD D2G]]></string>
+    <string name="app_name"><![CDATA[D2G Videos On Demand]]></string>
+    <string name="browse_title"><![CDATA[D2G Videos On Demand]]></string>
     <string name="related_movies">Related Videos</string>
     <string name="vertical_grid_title"><![CDATA[Video Grid]]></string>
 

@@ -1,21 +1,29 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\D2G\\Desktop\\D2G VOD Integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
+            "outputFile": "C:\\Users\\D2G\\Desktop\\d2g_vod\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
             "map": [
                 {
-                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\preference-v7-27.1.0.aar\\31e8b2b76bdb7158a1e97ef8afe90ed7\\res\\values-v17\\values-v17.xml",
+                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\preference-v14-26.1.0.aar\\080c9e43fc7287b4fd5190c58fd0bb04\\res\\values-v17\\values-v17.xml",
                     "from": {
-                        "startLines": "2,7,11",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,280,441",
-                        "endLines": "6,10,14",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "275,436,604"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "218"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "441",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "604"
                     }
                 },
                 {
-                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a8c5f78492e911f9be6e1b8c7f2f14f1\\res\\values-v17\\values-v17.xml",
+                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\ce46ba73f28ba290dc4aa53dd9b1d0ac\\res\\values-v17\\values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,26,29,32,35,39,42,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -31,6 +39,17 @@
                         "endLines": "17,21,24,27,30,34,38,41,44,47,51,54,58,62",
                         "endColumns": "12,12,12,12,12,12,12,12,12,12,12,12,12,12",
                         "endOffsets": "777,1005,1163,1313,1485,1713,1955,2126,2300,2469,2742,2942,3146,3475"
+                    }
+                },
+                {
+                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\preference-v7-26.1.0.aar\\35f06ca37b814232bce14e1d27d95aa3\\res\\values-v17\\values-v17.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,280",
+                        "endLines": "6,10",
+                        "endColumns": "12,12",
+                        "endOffsets": "275,436"
                     }
                 }
             ]

@@ -1368,7 +1368,7 @@ public class HotelServicesActivity extends Activity {
         channelButton = findViewById(R.id.chanBttn);
 
         //Hide Channel button Temporarily
-        channelButton.setVisibility(View.GONE);
+//        channelButton.setVisibility(View.GONE);
 
 
         vodclickButton = findViewById(R.id.vodBttn);
