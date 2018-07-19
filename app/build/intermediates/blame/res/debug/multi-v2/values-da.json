@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\D2G\\Desktop\\D2G VOD Integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-da\\values-da.xml",
+            "outputFile": "C:\\Users\\midnitekiller\\Desktop\\d2g_vod\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-da\\values-da.xml",
             "map": [
                 {
-                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a8c5f78492e911f9be6e1b8c7f2f14f1\\res\\values-da\\values-da.xml",
+                    "source": "C:\\Users\\midnitekiller\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f33638346ab070ae5430de941e4000e8\\res\\values-da\\values-da.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\leanback-v17-27.1.0.aar\\5a60a749d082352ebdc4fedd4ba8d7a0\\res\\values-da\\values-da.xml",
+                    "source": "C:\\Users\\midnitekiller\\.gradle\\caches\\transforms-1\\files-1.1\\leanback-v17-27.1.0.aar\\3a1c974d14e808cc1f443ebf92f0feda\\res\\values-da\\values-da.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,24 +38,7 @@
                     }
                 },
                 {
-                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.6.1.aar\\413b1a6be1e9b1844d9cc454fbdf66e8\\res\\values-da\\values-da.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,132,205,272,339,418,496,575,651,726,795",
-                        "endColumns": "76,72,66,66,78,77,78,75,74,68,64",
-                        "endOffsets": "127,200,267,334,413,491,570,646,721,790,855"
-                    },
-                    "to": {
-                        "startLines": "19,20,21,22,23,24,25,26,27,28,29",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1828,1905,1978,2045,2112,2191,2269,2348,2424,2499,2568",
-                        "endColumns": "76,72,66,66,78,77,78,75,74,68,64",
-                        "endOffsets": "1900,1973,2040,2107,2186,2264,2343,2419,2494,2563,2628"
-                    }
-                },
-                {
-                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\711a6d2f3c5dc5d26ea2b91c6963c842\\res\\values-da\\values-da.xml",
+                    "source": "C:\\Users\\midnitekiller\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\00cd559d431e0107cc1de706e941dffe\\res\\values-da\\values-da.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -69,6 +52,23 @@
                         "startOffsets": "7031",
                         "endColumns": "100",
                         "endOffsets": "7127"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\midnitekiller\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.6.1.aar\\269f7e9b2d16881a7445f6e9d6e64139\\res\\values-da\\values-da.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,132,205,272,339,418,496,575,651,726,795",
+                        "endColumns": "76,72,66,66,78,77,78,75,74,68,64",
+                        "endOffsets": "127,200,267,334,413,491,570,646,721,790,855"
+                    },
+                    "to": {
+                        "startLines": "19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1828,1905,1978,2045,2112,2191,2269,2348,2424,2499,2568",
+                        "endColumns": "76,72,66,66,78,77,78,75,74,68,64",
+                        "endOffsets": "1900,1973,2040,2107,2186,2264,2343,2419,2494,2563,2628"
                     }
                 }
             ]

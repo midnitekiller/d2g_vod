@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\D2G\\Desktop\\D2G VOD Integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ur-rPK\\values-ur-rPK.xml",
+            "outputFile": "C:\\Users\\midnitekiller\\Desktop\\d2g_vod\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ur-rPK\\values-ur-rPK.xml",
             "map": [
                 {
-                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.6.1.aar\\413b1a6be1e9b1844d9cc454fbdf66e8\\res\\values-ur-rPK\\values-ur-rPK.xml",
+                    "source": "C:\\Users\\midnitekiller\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.6.1.aar\\269f7e9b2d16881a7445f6e9d6e64139\\res\\values-ur-rPK\\values-ur-rPK.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

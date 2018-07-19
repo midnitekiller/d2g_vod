@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\D2G\\Desktop\\D2G VOD Integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
+            "outputFile": "C:\\Users\\midnitekiller\\Desktop\\d2g_vod\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
             "map": [
                 {
-                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a8c5f78492e911f9be6e1b8c7f2f14f1\\res\\values-si\\values-si.xml",
+                    "source": "C:\\Users\\midnitekiller\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f33638346ab070ae5430de941e4000e8\\res\\values-si\\values-si.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\leanback-v17-27.1.0.aar\\5a60a749d082352ebdc4fedd4ba8d7a0\\res\\values-si\\values-si.xml",
+                    "source": "C:\\Users\\midnitekiller\\.gradle\\caches\\transforms-1\\files-1.1\\leanback-v17-27.1.0.aar\\3a1c974d14e808cc1f443ebf92f0feda\\res\\values-si\\values-si.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\711a6d2f3c5dc5d26ea2b91c6963c842\\res\\values-si\\values-si.xml",
+                    "source": "C:\\Users\\midnitekiller\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\00cd559d431e0107cc1de706e941dffe\\res\\values-si\\values-si.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

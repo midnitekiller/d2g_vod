@@ -39,7 +39,8 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.direct2guests.d2g_tv.NonActivity.NetworkConnection;
 import com.direct2guests.d2g_tv.NonActivity.Variable;
 import com.direct2guests.d2g_tv.NonActivity.VolleyCallback;
-import com.direct2guests.d2g_tv.R;
+import com.direct2guests.d2g_tv.*;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;

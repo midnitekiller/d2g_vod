@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\D2G\\Desktop\\D2G VOD Integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
+            "outputFile": "C:\\Users\\midnitekiller\\Desktop\\d2g_vod\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
             "map": [
                 {
-                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\preference-v7-27.1.0.aar\\31e8b2b76bdb7158a1e97ef8afe90ed7\\res\\values-v17\\values-v17.xml",
+                    "source": "C:\\Users\\midnitekiller\\.gradle\\caches\\transforms-1\\files-1.1\\preference-v7-27.1.0.aar\\8aaec4609c9a1d70c6b9cc27d2e1773b\\res\\values-v17\\values-v17.xml",
                     "from": {
                         "startLines": "2,7,11",
                         "startColumns": "4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a8c5f78492e911f9be6e1b8c7f2f14f1\\res\\values-v17\\values-v17.xml",
+                    "source": "C:\\Users\\midnitekiller\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f33638346ab070ae5430de941e4000e8\\res\\values-v17\\values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,26,29,32,35,39,42,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",

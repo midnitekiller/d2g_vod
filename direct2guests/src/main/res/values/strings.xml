@@ -116,6 +116,7 @@
         <item>@drawable/background_lg8</item>
         <item>@drawable/background_lg9</item>
     </array>
+    <string name="title_activity_lang_select">LangSelectActivity</string>
 
 
 </resources>
