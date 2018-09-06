@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.direct2guests.d2g_tv.R;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -54,11 +55,17 @@ public class ChannelListAdapter extends ArrayAdapter<JSONObject> {
 
         View itemView = inflater.inflate(row_layout, parent, false);
 
+
         ImageView channel_logo = itemView.findViewById(R.id.channelLogo);
         TextView channel_name = itemView.findViewById(R.id.channelTitle);
         RelativeLayout channel_layout = itemView.findViewById(R.id.channelLayout);
+
+
+
+
         if(pos == position){
-            channel_layout.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.listviewtint));
+
+            channel_layout.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.orange_transparent));
             channel_name.setTextColor(Color.parseColor("#000000"));
         }else{
             channel_layout.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.white));
@@ -68,9 +75,10 @@ public class ChannelListAdapter extends ArrayAdapter<JSONObject> {
         try{
             if(list.get(position).has("channel_logo")){
 
-                Picasso.with(context).load(serveruri + list.get(position).getString("img_path")).resize(120,120).into(channel_logo);
+                Picasso.with(context).load(serveruri + list.get(position).getString("img_path")).resize(400,400).into(channel_logo);
+
             }else{
-                Picasso.with(context).load(R.drawable.not_available).resize(120,120).into(channel_logo);
+                Picasso.with(context).load(R.drawable.not_available).resize(400,400).into(channel_logo);
             }
             String cname = list.get(position).getString("channel_name");
             channel_name.setText(cname);

@@ -21,6 +21,10 @@ public class Variable implements Serializable {
     private String guest_first_name;
     private String guest_last_name;
     private String guest_id;
+    private String room_id;
+    private String qlcheckinpackage_id;
+    private String qlcheckinroom_status;
+
     private String room_number;
     private String check_in;
     private String check_out;
@@ -37,6 +41,17 @@ public class Variable implements Serializable {
     private String serverurl;
     private String localipapi;
     private String localipserver;
+
+
+
+    private String qlroom_id;
+    private String qlroom_no;
+    private String qlroom_type;
+    private String qlroom_price;
+    private String qlroom_status;
+
+    private String chanID, chanBG, chanBGPath, chanName;
+
 
     private String[] ads_restaurant_title;
     private String[] ads_restaurant_description;
@@ -97,6 +112,16 @@ public class Variable implements Serializable {
     public void setGuestID(String guest_id){
         this.guest_id = guest_id;
     }
+
+
+    public void setRoomID(String room_id){
+        this.room_id = room_id;
+    }
+
+
+
+
+
     public void setRoomNumber(String room_number){
         this.room_number = room_number;
     }
@@ -284,8 +309,41 @@ public class Variable implements Serializable {
         this.apiurl = apiurl;
     }
 
+    //Begin QueensLand Parsing
+
+    public void setQLroomID(String qlroom_id){this.qlroom_id = qlroom_id;}
+    public void setQLroomNo(String qlroom_no){this.qlroom_no = qlroom_no;}
+    public void setQLroomType(String qlroom_type){this.qlroom_type = qlroom_type;}
+    public void setQLroomPrice(String qlroom_price){this.qlroom_price = qlroom_price;}
+    public void setQLroomStatus(String qlroom_status){this.qlroom_status = qlroom_status;}
+
+    public String setChanID(String chanID){this.chanID = chanID;
+        return chanID;
+    }
+    public void setChanBG(String chanBG){this.chanBG = chanBG;}
+    public void setChanBGPath(String chanBGPath){this.chanBGPath = chanBGPath;}
+    public void setChanName(String chanName){this.chanName = chanName;}
+
+    //End QL
+
+
 
     //getters
+
+
+    public String getQLroomID() {return qlroom_id;}
+    public String getQlroomNo() {return qlroom_no;}
+    public String getQLroomType() {return qlroom_type;}
+    public String getQLroomStatus() {return qlroom_status;}
+    public String getQLroomPrice() {return qlroom_price;}
+
+    public String getChanID() {return chanID;}
+    public String getChanBG() {return chanBG;}
+    public String getChanBGPath() {return chanBGPath;}
+    public String getChanName() {return chanName;}
+
+
+
     public String getUniqueID(){
         return unique_id;
     }
@@ -304,6 +362,15 @@ public class Variable implements Serializable {
     public String getGuestID(){
         return guest_id;
     }
+    public String getRoomID(){
+        return room_id;
+    }
+
+
+
+
+
+
     public String getRoomNumber(){
         return room_number;
     }

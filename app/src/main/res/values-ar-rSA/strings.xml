@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="general.back">عوده</string>
+  <string name="general.cancel">إلغاء الأمر</string>
+  <string name="general.confirm">هل أنت متأكد؟</string>
+  <string name="general.destroy">حذف</string>
+  <string name="general.edit">تحرير</string>
+  <string name="general.new">الجديد</string>
+  <string name="hello">مرحبا بالعالم</string>
+  <string name="layouts.application.about">عن</string>
+  <string name="layouts.application.account">حساب</string>
+  <string name="layouts.application.app_store">المتجر</string>
+  <string name="layouts.application.imprint">بصمه</string>
+  <string name="layouts.application.logout">الخروج</string>
+  <string name="layouts.application.my_mails">بلدي الرسائل</string>
+  <string name="layouts.application.press">اضغط</string>
+  <string name="layouts.application.preview">معاينه</string>
+  <string name="layouts.application.profile">الشخصيه</string>
+  <string name="layouts.application.sign_in">تسجيل الدخول</string>
+  <string name="layouts.application.sign_up">تسجيل</string>
+</resources>

@@ -10,26 +10,72 @@
         android:id="@+id/launcher_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background_lg"
+        android:background="@drawable/ql2"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="0dp">
 
         <ImageView
-            android:id="@+id/userLogo"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="84dp"
-            android:layout_marginTop="46dp"
-            android:src="@drawable/user_icon"
-            android:visibility="visible"
-            tools:ignore="ContentDescription" />
+            android:id="@+id/imageView"
+            android:layout_width="237dp"
+            android:layout_height="286dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="34dp"
+            android:src="@android:drawable/screen_background_dark_transparent" />
 
         <TextView
-            android:id="@+id/welcomeGuest"
+            android:id="@+id/shadowTime"
+            android:layout_width="123dp"
+            android:layout_height="42dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="277dp"
+            android:layout_marginEnd="98dp"
+            android:text="TextView"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="175dp"
+            android:layout_height="42dp"
+            android:layout_alignStart="@+id/textClock"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-4dp"
+            android:layout_marginBottom="116dp"
+            android:text="Current Time:"
+            android:textSize="24sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tm_currentTime"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="746dp"
+            android:layout_marginTop="419dp"
+            android:text="TextView"
+            android:textColor="@color/lb_speech_orb_recording"
+            android:textSize="30sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textClock"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-2dp"
+            android:layout_marginTop="235dp"
+            android:text="Check-in Time:"
+            android:textSize="24sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tm_welcomeTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -44,9 +90,10 @@
             android:id="@+id/dateTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/relativeLayout"
+            android:layout_marginTop="57dp"
             android:layout_marginEnd="25dp"
             android:layout_toStartOf="@+id/textClock"
+            android:paddingTop="0dp"
             android:text="@string/launcherDate"
             android:textAlignment="viewEnd"
             android:textColor="#fff"
@@ -55,34 +102,50 @@
 
         <TextClock
             android:id="@+id/textClock"
-            android:layout_width="wrap_content"
+            android:layout_width="192dp"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/relativeLayout"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="54dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="48dp"
+            android:paddingTop="0dp"
+            android:text="textClock"
             android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/userLogo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="46dp"
+            android:src="@drawable/user_icon"
+            android:visibility="visible"
+            tools:ignore="ContentDescription" />
 
         <RelativeLayout
             android:id="@+id/weatherL"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
+            android:layout_width="389dp"
+            android:layout_height="42dp"
             android:layout_below="@+id/dateTxt"
+            android:layout_alignStart="@+id/dateTxt"
             android:layout_alignRight="@+id/textClock"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="-41dp"
             android:gravity="right">
 
             <ImageView
                 android:id="@+id/LweatherIcon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="5dp" />
+                android:layout_centerVertical="true" />
 
             <TextView
                 android:id="@+id/LweatherTemp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="5dp"
                 android:layout_toRightOf="@+id/LweatherIcon"
                 android:textColor="#fff"
                 android:textSize="20sp" />
@@ -91,7 +154,7 @@
                 android:id="@+id/LweatherDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
+                android:layout_alignBottom="@+id/LweatherTemp"
                 android:layout_toRightOf="@+id/LweatherTemp"
                 android:textColor="#fff"
                 android:textSize="18sp" />
@@ -102,9 +165,10 @@
             android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/welcomeGuest"
+            android:layout_below="@+id/tm_welcomeTxt"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="50dp">
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="48dp">
 
             <ImageView
                 android:id="@+id/hotelLogo"
@@ -120,11 +184,12 @@
 
             <HorizontalScrollView
                 android:id="@+id/LauncherScrollView"
-                android:layout_width="match_parent"
+                android:layout_width="724dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="-18dp"
+                android:layout_marginStart="-21dp"
                 android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginRight="0dp"
                 android:layout_toEndOf="@+id/hotelLogo"
                 android:persistentDrawingCache="all">
@@ -143,8 +208,8 @@
 
                     <FrameLayout
                         android:id="@+id/watchtvframe"
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
                         android:layout_marginLeft="55dp"
                         android:layout_marginTop="55dp"
                         android:layout_marginRight="40dp"
@@ -162,10 +227,10 @@
 
                         <ImageView
                             android:id="@+id/tv_icon"
-                            android:layout_width="110dp"
-                            android:layout_height="110dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="70dp"
+                            android:layout_marginTop="30dp"
                             android:drawingCacheQuality="auto"
                             android:src="@drawable/tv_icon" />
 
@@ -180,16 +245,16 @@
                             android:text="@string/launcherWatchTV"
                             android:textAlignment="center"
                             android:textColor="#000"
-                            android:textSize="24sp"
+                            android:textSize="18sp"
                             android:textStyle="bold" />
                     </FrameLayout>
 
                     <FrameLayout
                         android:id="@+id/hotelservicesframe"
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
                         android:layout_marginTop="55dp"
-                        android:layout_marginRight="55dp"
+                        android:layout_marginRight="40dp"
                         android:alwaysDrawnWithCache="true"
                         android:animationCache="true"
                         android:background="@drawable/background_round"
@@ -200,10 +265,10 @@
 
                         <ImageView
                             android:id="@+id/about_icon"
-                            android:layout_width="110dp"
-                            android:layout_height="110dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="70dp"
+                            android:layout_marginTop="30dp"
                             android:src="@drawable/about_icon" />
 
                         <TextView
@@ -217,13 +282,54 @@
                             android:text="@string/launcherHotelServices"
                             android:textAlignment="center"
                             android:textColor="#000"
-                            android:textSize="24sp"
+                            android:textSize="18sp"
                             android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/checkoutFrame"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="55dp"
+                        android:layout_marginRight="40dp"
+                        android:alwaysDrawnWithCache="true"
+                        android:animationCache="true"
+                        android:background="@drawable/background_round"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:elevation="30dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:onClick="openCheckoutActivity"
+                        android:persistentDrawingCache="all"
+                        android:translationZ="1dp">
+
+                        <ImageView
+                            android:id="@+id/close_icon"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="40dp"
+                            android:drawingCacheQuality="auto"
+                            android:src="@drawable/close_logo" />
+
+                        <TextView
+                            android:id="@+id/checkout_frame_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:padding="17dp"
+                            android:text="@string/launcherExtendButton"
+                            android:textAlignment="center"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:textStyle="normal" />
                     </FrameLayout>
                 </LinearLayout>
             </HorizontalScrollView>
+
         </RelativeLayout>
-
     </RelativeLayout>
-
 </android.support.constraint.ConstraintLayout>

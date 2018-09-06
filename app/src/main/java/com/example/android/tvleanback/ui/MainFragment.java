@@ -18,7 +18,6 @@ package com.example.android.tvleanback.ui;
 
 import android.app.Activity;
 import android.app.LoaderManager;
-import android.content.Context;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
@@ -58,7 +57,6 @@ import com.example.android.tvleanback.data.VideoContract;
 import com.example.android.tvleanback.model.Video;
 import com.example.android.tvleanback.model.VideoCursorMapper;
 import com.example.android.tvleanback.presenter.CardPresenter;
-import com.example.android.tvleanback.presenter.GridItemPresenter;
 import com.example.android.tvleanback.presenter.IconHeaderItemPresenter;
 import com.example.android.tvleanback.recommendation.UpdateRecommendationsService;
 
@@ -66,6 +64,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import jp.wasabeef.glide.transformations.BlurTransformation;
+
+import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
 
 /*
  * Main class to show BrowseFragment with header and rows of videos
@@ -144,7 +146,7 @@ public class MainFragment extends BrowseFragment implements LoaderManager.Loader
         setBadgeDrawable(
                 getActivity().getResources().getDrawable(R.drawable.ic_launcher, null));
         setTitle(getString(R.string.browse_title)); // Badge, when set, takes precedent over title
-//        setHeadersState(HEADERS_HIDDE);
+//        setHeadersState(HEADERS_HIDE);
 //        setHeadersTransitionOnBackEnabled(false);
 
         // Set fastLane (or headers) background color
@@ -186,7 +188,8 @@ public class MainFragment extends BrowseFragment implements LoaderManager.Loader
         Glide.with(this)
                 .asBitmap()
                 .load(uri)
-                .apply(options)
+//                .apply(options)
+                .apply(bitmapTransform(new BlurTransformation(4, 3)))
                 .into(new SimpleTarget<Bitmap>(width, height) {
                     @Override
                     public void onResourceReady(

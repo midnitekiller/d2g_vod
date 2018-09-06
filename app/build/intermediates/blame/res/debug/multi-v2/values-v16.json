@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\D2G\\Desktop\\d2g_vod\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\D2G\\Desktop\\D2G V2 First Attemp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\support-compat-27.0.0.aar\\7c52b0ae80aebae6ffed8493f781bc38\\res\\values-v16\\values-v16.xml",
+                    "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\7c728b4704d2216e3008e1386c98f95c\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
