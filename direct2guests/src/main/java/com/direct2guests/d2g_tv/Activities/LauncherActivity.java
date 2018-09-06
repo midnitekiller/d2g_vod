@@ -6,9 +6,12 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -20,6 +23,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.android.volley.VolleyError;
 import com.direct2guests.d2g_tv.NonActivity.NetworkConnection;
@@ -44,7 +48,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.text.DateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import static android.view.View.VISIBLE;
 
@@ -127,7 +134,7 @@ public class LauncherActivity extends LangSelectActivity {
         });
         Bundle configBundle = new Bundle();
         try {
-            setContentView(R.layout.activity_launcher);
+            setContentView(R.layout.activity_launcher2nd);
         }catch (RuntimeException e){
             onCreate(configBundle);
         }
@@ -202,7 +209,7 @@ public class LauncherActivity extends LangSelectActivity {
 //        Picasso.with(getApplicationContext()).load(vdata.getServerURL()+vdata.getHotelLogo()).into(hotellogo_imgview);
 
         onFocusFrames();
-
+        videoViewPlay();
 
 
         // Set current and consume time
@@ -240,7 +247,7 @@ public class LauncherActivity extends LangSelectActivity {
         mTracker.send(new HitBuilders.ScreenViewBuilder().build());
 
 
-
+        videoViewPlay();
     }
 
     @Override
@@ -252,6 +259,8 @@ public class LauncherActivity extends LangSelectActivity {
         decorView.setSystemUiVisibility(uiOptions);
         //end code hide status bar
 
+
+//        videoViewPlay();
     }
 
     @Override
@@ -562,15 +571,30 @@ public class LauncherActivity extends LangSelectActivity {
         runOnUiThread(new Runnable() {
             public void run() {
                 try {
+
+                    long millis = System.currentTimeMillis();
+
+                    int seconds = (int) (millis / 1000) % 60 ;
+                    int minutes = (int) ((millis / (1000*60)) % 60);
+                    int hours   = (int) ((millis / (1000*60*60)) % 12);
+
                     long oldtime = preferenceSettingsTime.getLong("checkintime", 0);
 
-                    currentTime.setText(String.valueOf(oldtime));
-                    consumeTime.setText(String.valueOf(System.currentTimeMillis()));
+                    int oldhours = (int) ((oldtime / (1000*60*60)) % 12);
+                    int oldminutes = (int) ((oldtime / (1000*60)) % 60);
+                    int oldseconds = (int) (oldtime / 1000) % 60 ;
+
+
+
+                    currentTime.setText(String.valueOf("Checked In Time:"));
+                    consumeTime.setText(String.valueOf(oldhours + ":" + oldminutes + ":" + oldseconds));
 
                     long longdate = 10811000; // 3 hrs value
-                    testTime.setText(String.valueOf(longdate));
+                    testTime.setText("Current Time:");
                     TextView txtCurrentTime = (TextView)findViewById(R.id.tm_currentTime);
-                    txtCurrentTime.setText(String.valueOf(System.currentTimeMillis()));
+
+                    txtCurrentTime.setText(String.valueOf(hours + ":" + minutes + ":" + seconds));
+//                    txtCurrentTime.setText(  );
 
                     if (System.currentTimeMillis() - oldtime > longdate) {
 
@@ -637,6 +661,29 @@ public class LauncherActivity extends LangSelectActivity {
             }
         }
     }
+
+    public void videoViewPlay(){
+
+        Resources res = getResources();
+        String[] ADS = res.getStringArray(R.array.myADS);
+        String randomStr = ADS[new Random().nextInt(ADS.length)];
+
+        VideoView videoView = findViewById(R.id.videoViewLauncher);
+
+        videoView.setVideoPath(String.valueOf(randomStr));
+
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+                videoView.start();
+            }
+        });
+
+
+    }
+
+
 
 
 
