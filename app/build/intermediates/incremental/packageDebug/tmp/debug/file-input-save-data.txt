@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Sep 06 17:14:20 SGT 2018
+#Thu Sep 06 23:39:28 SGT 2018
 4.path=lib/x86_64/libRSSupport.so
 8.set=DEX
 6.path=lib/mips/libRSSupport.so

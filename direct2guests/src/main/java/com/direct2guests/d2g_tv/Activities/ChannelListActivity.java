@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.android.volley.VolleyError;
 import com.direct2guests.d2g_tv.NonActivity.ChannelListAdapter;
@@ -65,7 +67,7 @@ public class ChannelListActivity extends Activity {
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
         //end code hide status bar
-        setContentView(R.layout.activity_channel_list);
+        setContentView(R.layout.activity_channel_list2nd);
 
 
 
@@ -75,6 +77,9 @@ public class ChannelListActivity extends Activity {
         vdata = (Variable)getIntent().getSerializableExtra(Variable.EXTRA);
 
         channel_listview = findViewById(R.id.channelListview);
+
+
+        videoViewPlay();
 
     }
 
@@ -89,7 +94,7 @@ public class ChannelListActivity extends Activity {
 //        mTracker.setScreenName(vdata.getHotelName()+" ~ Room No. "+vdata.getRoomNumber()+" ~ "+"Channel List View");
 //        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
         getChannels();
-
+        videoViewPlay();
     }
 
 
@@ -101,6 +106,24 @@ public class ChannelListActivity extends Activity {
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
         //end code hide status bar
+
+    }
+
+
+    @Override
+    public void onBackPressed(){
+
+//        super.onBackPressed();
+        launcher_activity();
+    }
+
+
+
+
+    public void launcher_activity(){
+        Intent i = new Intent(this, LauncherActivity.class);
+        i.putExtra(Variable.EXTRA, vdata);
+        startActivity(i);
     }
 
 
@@ -139,6 +162,7 @@ public class ChannelListActivity extends Activity {
                         channel_adapter.setPosition(i);
                         channel_adapter.notifyDataSetChanged();
                         String ChanPath;
+                        String ChanSource;
                         try {
                             ChanPath = channel_list.get(i).getString("img_path");
                             String bitURL = "http://192.168.1.8/" + ChanPath;
@@ -146,6 +170,21 @@ public class ChannelListActivity extends Activity {
                             RelativeLayout imageBGchan = (RelativeLayout)findViewById(R.id.ListLayout);
                             Drawable dr = new BitmapDrawable(mychanBG);
                             imageBGchan.setBackground(dr);
+
+//                            ChanSource = channel_list.get(i).getString("channel_url");
+//                            VideoView videoView = findViewById(R.id.videoViewChannelList);
+//                            videoView.setVideoPath(ChanSource);
+//                            videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//                                @Override
+//                                public void onPrepared(MediaPlayer mp) {
+//                                    mp.setLooping(true);
+//                                    videoView.start();
+//                                }
+//                            });
+
+
+
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -198,6 +237,29 @@ public class ChannelListActivity extends Activity {
             e.printStackTrace();
             return null;
         }
+    }
+
+
+    public void videoViewPlay(){
+
+        Resources res = getResources();
+        String[] ADS = res.getStringArray(R.array.myADS);
+        String randomStr = ADS[new Random().nextInt(ADS.length)];
+
+        VideoView videoView = findViewById(R.id.videoViewChannelList);
+
+        videoView.setVideoPath(String.valueOf(randomStr));
+
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+                videoView.start();
+            }
+        });
+
+
+
     }
 
 

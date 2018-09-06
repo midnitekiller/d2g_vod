@@ -241,7 +241,7 @@ public class LauncherActivity extends LangSelectActivity {
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
         //end code hide status bar
-        getWeatherReport();
+//        getWeatherReport();
 
         mTracker.setScreenName(vdata.getHotelName()+" ~ Room No. "+vdata.getRoomNumber()+" ~ "+"Main View");
         mTracker.send(new HitBuilders.ScreenViewBuilder().build());
@@ -310,6 +310,7 @@ public class LauncherActivity extends LangSelectActivity {
             public void onClick(View v) {
                 Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.example.android.tvleanback");
                 startActivity(launchIntent);
+
             }
         });
         vodclickButton.setOnFocusChangeListener(new View.OnFocusChangeListener() {

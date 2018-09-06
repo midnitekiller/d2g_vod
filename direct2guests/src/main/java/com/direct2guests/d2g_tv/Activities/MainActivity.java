@@ -1196,6 +1196,7 @@ public class MainActivity extends LangSelectActivity {
         preferenceEditorTime.commit();
     }
 
+    
 
     public void roomdata(){
         Log.d("API Url: ", vdata.getApiUrl().toString());
