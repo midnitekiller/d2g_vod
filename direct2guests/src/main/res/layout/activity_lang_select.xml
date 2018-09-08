@@ -13,6 +13,10 @@
         android:layout_height="match_parent"
         android:background="@drawable/ql2">
 
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -184,3 +188,5 @@
 
 
 </android.support.constraint.ConstraintLayout>
+
+

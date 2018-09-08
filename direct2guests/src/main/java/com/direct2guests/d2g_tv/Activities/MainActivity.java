@@ -1116,8 +1116,8 @@ public class MainActivity extends LangSelectActivity {
         qlcheckURL02 = vdata.getApiUrl() + "addroomactivity.php?room_id=" + vdata.getQLroomID();
 
                 new AlertDialog.Builder(MainActivity.this)
-                        .setTitle("CHECK-IN")
-                        .setMessage("Press OK to CHECK-IN!")
+                        .setTitle("CHECKIN")
+                        .setMessage("Press OK to CHECKIN!")
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {

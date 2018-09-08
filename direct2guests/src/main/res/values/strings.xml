@@ -163,7 +163,6 @@
 
     <string-array name="myADS">
         <item>"http://192.168.1.8/vodfiles/d2gaddvideo.mp4"</item>
-
     </string-array>
 
 
@@ -177,6 +176,13 @@
 
 
     <string name="Korean">ko</string>
+
+
+
+
+
+
+
 
 
 </resources>
