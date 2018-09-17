@@ -36,8 +36,12 @@
 
   <string name="search_results">Search results for \'%1$s\'</string>
   <string name="no_search_results">No search results found for \'%1$s\'</string>
+<<<<<<< HEAD
   <string name="catalog_url">http://192.168.1.14/vodAPI/vodjson.json</string>
   <!--<string name="catalog_url">http://192.168.1.8/vodfiles/vod.json</string>-->
+=======
+  <string name="catalog_url">http://192.168.1.8/vodAPI/qlvod.json</string>
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
   <!-- Error messages -->
 

@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@drawable/ads10"
+=======
+    android:background="@drawable/ql2"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
     tools:context="com.direct2guests.d2g_tv.Activities.FoodDrinksActivity">
 
     <RelativeLayout

@@ -9,7 +9,7 @@
         android:id="@+id/cardDialog"
         android:layout_width="900dp"
         android:layout_height="420dp"
-        android:background="@drawable/places_nearby_bg"
+        android:background="@drawable/ql2"
         android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,20 +20,20 @@
             android:id="@+id/dMainImage"
             android:layout_width="500dp"
             android:layout_height="500dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="54dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true">
+            android:layout_marginBottom="54dp">
 
             <RelativeLayout
                 android:id="@+id/indicators"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:gravity="center_vertical|center_horizontal"
-                android:translationZ="50dp"
+                android:layout_alignParentStart="true"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true">
+                android:gravity="center_vertical|center_horizontal"
+                android:translationZ="50dp">
 
                 <ImageView
                     android:id="@+id/indi1"
@@ -84,10 +84,10 @@
                 android:id="@+id/arrowBack"
                 android:layout_width="50dp"
                 android:layout_height="80dp"
-                android:layout_alignParentStart="true"
                 android:layout_alignTop="@+id/arrowNext"
-                android:layout_marginLeft="-8dp"
+                android:layout_alignParentStart="true"
                 android:layout_marginStart="12dp"
+                android:layout_marginLeft="-8dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/arrow_back"
                 android:translationZ="10dp" />
@@ -110,6 +110,7 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
+                android:background="@drawable/background_round"
                 android:scaleType="centerInside" />
 
         </RelativeLayout>
@@ -118,16 +119,17 @@
             android:id="@+id/dDetails"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_alignParentBottom="false"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentLeft="false"
             android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="false"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/dMainImage"
-            android:paddingBottom="15dp"
-            android:paddingEnd="10dp"
+            android:background="@drawable/background_round"
             android:paddingStart="15dp"
-            android:paddingTop="15dp">
+            android:paddingTop="15dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="15dp">
 
             <TextView
                 android:id="@+id/adTitle"
@@ -163,8 +165,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/separator"
-                android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="Address : Cebu, Philippines"
                 android:textColor="#393939"
                 android:textSize="18sp" />
@@ -183,8 +185,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/separator2"
-                android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="Contact No : 0912-XXX-XXXX"
                 android:textColor="#393939"
                 android:textSize="18sp" />

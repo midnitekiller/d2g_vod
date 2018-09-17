@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "C:\\Users\\D2G\\Desktop\\QuensLand Setup\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\D2G\\Desktop\\QuensLand Setup\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+=======
+            "outputFile": "C:\\Users\\D2G\\Desktop\\D2G V2 First Attemp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\D2G\\Desktop\\D2G V2 First Attemp\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
                     "from": {
                         "startLines": "4,5",
                         "startColumns": "4,4",

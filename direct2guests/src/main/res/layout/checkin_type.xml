@@ -7,6 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/showhouse"
+<<<<<<< HEAD
         android:layout_width="510dp"
         android:layout_height="550dp"
         android:background="@drawable/housekeepingmodal_bg"
@@ -15,6 +16,17 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
+=======
+        android:layout_width="531dp"
+        android:layout_height="250dp"
+        android:background="@drawable/modal_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.492">
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
         <TextView
             android:id="@+id/HousekeepingTitleS"
@@ -25,8 +37,13 @@
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
             android:background="#bb000000"
+<<<<<<< HEAD
             android:padding="20dp"
             android:text="Check In Packages"
+=======
+            android:padding="0dp"
+            android:text="Check In Process"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:textAlignment="center"
             android:textColor="#fff"
             android:textSize="30sp"
@@ -34,17 +51,30 @@
 
 
         <TextView
+<<<<<<< HEAD
             android:id="@+id/HousekeepingDateS"
+=======
+            android:id="@+id/checkinDateDialog"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/HousekeepingTitleS"
             android:layout_alignParentStart="true"
             android:layout_marginTop="32dp"
+<<<<<<< HEAD
             android:text="Thu June 29 2017"
             android:textAlignment="center"
             android:textColor="#393939"
             android:textSize="25sp"
             android:textStyle="bold" />
+=======
+            android:text="@string/launcherDate"
+            android:textAlignment="center"
+            android:textColor="#393939"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
         <Button
             android:id="@+id/promoBttn"
@@ -53,13 +83,22 @@
 
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
+<<<<<<< HEAD
             android:layout_marginEnd="104dp"
             android:layout_marginBottom="314dp"
+=======
+            android:layout_marginEnd="108dp"
+            android:layout_marginBottom="83dp"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:background="@drawable/confirm_button"
             android:focusable="auto"
             android:focusableInTouchMode="true"
             android:onClick="onClickPromoTime"
+<<<<<<< HEAD
             android:text="PROMO Package"
+=======
+            android:text="CHECKIN NOW"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:textColor="#fff"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -79,7 +118,12 @@
             android:text="3 Hours Package"
             android:textColor="#fff"
             android:textSize="20sp"
+<<<<<<< HEAD
             android:textStyle="bold" />
+=======
+            android:textStyle="bold"
+            android:visibility="invisible" />
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
         <Button
             android:id="@+id/longBttn"
@@ -87,8 +131,13 @@
             android:layout_height="60dp"
             android:layout_alignStart="@+id/shortBttn"
             android:layout_alignParentBottom="true"
+<<<<<<< HEAD
             android:layout_marginStart="-2dp"
             android:layout_marginBottom="138dp"
+=======
+            android:layout_marginStart="-20dp"
+            android:layout_marginBottom="26dp"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:background="@drawable/confirm_button"
             android:focusable="auto"
             android:focusableInTouchMode="true"
@@ -97,7 +146,12 @@
             android:text="12 Hours Package"
             android:textColor="#fff"
             android:textSize="20sp"
+<<<<<<< HEAD
             android:textStyle="bold" />
+=======
+            android:textStyle="bold"
+            android:visibility="invisible" />
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
 
     </RelativeLayout>

@@ -11,8 +11,17 @@
         android:id="@+id/langSelectLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+<<<<<<< HEAD
         android:background="@drawable/ads10">
 
+=======
+        android:background="@drawable/ql2">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
     </RelativeLayout>
 
     <RelativeLayout
@@ -183,4 +192,10 @@
     </RelativeLayout>
 
 
+<<<<<<< HEAD
 </android.support.constraint.ConstraintLayout>
+=======
+</android.support.constraint.ConstraintLayout>
+
+
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646

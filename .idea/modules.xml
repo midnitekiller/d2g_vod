@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/QuensLand Setup.iml" filepath="$PROJECT_DIR$/QuensLand Setup.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/D2G V2 First Attemp.iml" filepath="$PROJECT_DIR$/D2G V2 First Attemp.iml" />
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/direct2guests/direct2guests.iml" filepath="$PROJECT_DIR$/direct2guests/direct2guests.iml" />
     </modules>

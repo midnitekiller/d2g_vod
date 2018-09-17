@@ -575,7 +575,11 @@ public class HotelServicesActivity extends LangSelectActivity {
         HKWhole = dialog.findViewById(R.id.WholeHKBtn);
         HKRequest = dialog.findViewById(R.id.RequestHKBtnS);
 
+<<<<<<< HEAD
         HKDate = dialog.findViewById(R.id.HousekeepingDateS);
+=======
+        HKDate = dialog.findViewById(R.id.checkinDateDialog);
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
         HKStatus = dialog.findViewById(R.id.HousekeepingStatusS);
         HKCancelHouseKeeping = dialog.findViewById(R.id.CancelHouseKeeping);
         HKTitle = dialog.findViewById(R.id.HousekeepingTitleS);
@@ -1358,11 +1362,11 @@ public class HotelServicesActivity extends LangSelectActivity {
     }
 
     public void openTV(final View view){
-        for (int i = 0; i < access.length; i++) {
-            if (access[i].equals("chat_acc")) {
-                t.interrupt();
-            }
-        }
+//        for (int i = 0; i < access.length; i++) {
+//            if (access[i].equals("chat_acc")) {
+//                t.interrupt();
+//            }
+//        }
 
         setContentView(R.layout.view_choices);
         View decorView = getWindow().getDecorView();
@@ -1370,11 +1374,6 @@ public class HotelServicesActivity extends LangSelectActivity {
         decorView.setSystemUiVisibility(uiOptions);
 
         channelButton = findViewById(R.id.chanBttn);
-
-        //Hide Channel button Temporarily
-//        channelButton.setVisibility(View.GONE);
-
-
         vodclickButton = findViewById(R.id.vodBttn);
         channelButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1386,6 +1385,21 @@ public class HotelServicesActivity extends LangSelectActivity {
             }
 
         });
+
+        channelButton.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if(hasFocus){
+                    view.setBackgroundTintList(getColorStateList(R.color.hkfocustint));
+                    HKFocus = 0;
+                } else{
+                    view.setBackgroundTintList(getColorStateList(R.color.quantitybuttoncartblur));
+                }
+
+            }
+        });
+
+
         vodclickButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -1393,12 +1407,19 @@ public class HotelServicesActivity extends LangSelectActivity {
                 startActivity(launchIntent);
             }
         });
+        vodclickButton.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if(hasFocus){
+                    view.setBackgroundTintList(getColorStateList(R.color.hkfocustint));
+                    HKFocus = 0;
+                } else{
+                    view.setBackgroundTintList(getColorStateList(R.color.quantitybuttoncartblur));
+                }
 
+            }
+        });
 
-//        Intent i = new Intent(this, ChannelListActivity.class);
-//        i.putExtra(Variable.EXTRA, vdata);
-//        i.putExtra(LauncherActivity.WATCHTV_FROM, "hotelservices");
-//        startActivity(i);
 
     }
 

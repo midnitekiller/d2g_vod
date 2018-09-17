@@ -1,7 +1,11 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "C:\\Users\\D2G\\Desktop\\QuensLand Setup\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
+=======
+            "outputFile": "C:\\Users\\D2G\\Desktop\\D2G V2 First Attemp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             "map": [
                 {
                     "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\preference-v14-26.1.0.aar\\080c9e43fc7287b4fd5190c58fd0bb04\\res\\values-v17\\values-v17.xml",

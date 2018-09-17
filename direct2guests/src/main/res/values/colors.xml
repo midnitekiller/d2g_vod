@@ -6,7 +6,7 @@
 
 
     
-    <color name="background_gradient_start">#000000</color>
+    <color name="background_gradient_start">#b1000000</color>
     <color name="background_gradient_end">#dddddd</color>
     <color name="fastlane_background">#0096a6</color>
     <color name="search_opaque">#ffaa3f</color>
@@ -19,7 +19,7 @@
     <color name="black">#59000000</color>
     <color name="white">#FFFFFF</color>
     <color name="orange_transparent">#aafadca7</color>
-    <color name="orange">#FADCA7</color>
+    <color name="orange">#fadca7</color>
     <color name="yellow">#ffe602</color>.3
     <color name="default_background">#3d3d3d</color>
 </resources>

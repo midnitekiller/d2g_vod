@@ -9,7 +9,11 @@
         android:id="@+id/launcher_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+<<<<<<< HEAD
         android:background="@drawable/ads10"
+=======
+        android:background="@drawable/ql2"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints"
@@ -156,7 +160,7 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/widgets"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/hotelLogo_hs"
@@ -174,7 +178,9 @@
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_centerVertical="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="-6dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginEnd="10dp"
                 android:layout_toEndOf="@+id/hotelLogo_hs"
                 android:animationCache="true"
@@ -243,7 +249,6 @@
                         android:drawingCacheQuality="auto"
                         android:focusable="true"
                         android:focusableInTouchMode="true"
-                        android:focusedByDefault="true"
                         android:onClick="openChat"
                         android:translationZ="1dp"
                         android:visibility="gone">

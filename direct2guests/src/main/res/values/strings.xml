@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">D2G-IPTV</string>
 
@@ -153,6 +154,7 @@
     </string-array>
 
     <array name="myImages">
+<<<<<<< HEAD
         <!--<item>@drawable/background_lg1</item>-->
         <!--<item>@drawable/background_lg2</item>-->
         <!--<item>@drawable/background_lg4</item>-->
@@ -187,5 +189,37 @@
 
     <string name="Korean">ko</string>
 
+=======
+
+        <item>@drawable/ql1</item>
+        <item>@drawable/ql2</item>
+        <item>@drawable/ql3</item>
+
+    </array>
+
+    <string-array name="myADS">
+        <item>"http://192.168.1.8/vodfiles/d2gaddvideo.mp4"</item>
+    </string-array>
+
+
+    <!--<array name="chanListBackground">-->
+        <!--<item>@drawable/channel_list_bg1</item>-->
+        <!--<item>@drawable/channel_list_bg2</item>-->
+        <!--<item>@drawable/channel_list_bg3</item>-->
+        <!--<item>@drawable/channel_list_bg4</item>-->
+        <!--<item>@drawable/channel_list_bg5</item>-->
+    <!--</array>-->
+
+
+    <string name="Korean">ko</string>
+
+
+
+
+
+
+
+
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
 </resources>

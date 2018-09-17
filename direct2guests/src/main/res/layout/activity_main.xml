@@ -10,13 +10,18 @@
         android:id="@+id/continueButton"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+<<<<<<< HEAD
         android:background="@drawable/ads10"
+=======
+        android:background="@drawable/ql2"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:id="@+id/dateTxtmain"
+<<<<<<< HEAD
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/textClock"
@@ -28,10 +33,25 @@
             android:textAlignment="viewEnd"
             android:textColor="#fff"
             android:textSize="30sp"
+=======
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/langSelectButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="-9dp"
+            android:fontFamily="monospace"
+            android:paddingTop="0dp"
+            android:text="@string/launcherDate"
+            android:textColor="@color/orange"
+            android:textSize="18sp"
+            android:typeface="monospace"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             tools:ignore="RelativeOverlap" />
 
         <TextClock
             android:id="@+id/textClock"
+<<<<<<< HEAD
             android:layout_width="188dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -40,6 +60,19 @@
             android:layout_marginBottom="20dp"
             android:text="textClock"
             android:textSize="30sp" />
+=======
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="564dp"
+            android:layout_marginBottom="486dp"
+            android:fontFamily="monospace"
+            android:text="textClock"
+            android:textColor="@color/orange"
+            android:textSize="18sp"
+            android:typeface="monospace" />
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
         <TextView
             android:id="@+id/uid"
@@ -63,36 +96,41 @@
 
             <TextView
                 android:id="@+id/welcomeTxtV"
-                android:layout_width="wrap_content"
+                android:layout_width="206dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/btn_transparent"
                 android:fontFamily="cursive"
                 android:text="@string/indexWelcome"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="#fff"
                 android:textSize="35sp" />
 
             <TextView
                 android:id="@+id/guestNameTxtV"
-                android:layout_width="197dp"
+                android:layout_width="227dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="21dp"
                 android:layout_toEndOf="@+id/welcomeTxtV"
+                android:background="@drawable/btn_transparent"
                 android:fontFamily="cursive"
                 android:text="@string/indexGuestName"
+                android:textAlignment="center"
                 android:textColor="#fff"
                 android:textSize="35sp"
                 android:typeface="monospace" />
 
             <TextView
                 android:id="@+id/hotelNameTxtV"
+<<<<<<< HEAD
                 android:layout_width="359dp"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/button"
@@ -105,6 +143,22 @@
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="#fff"
                 android:textSize="45sp" />
+=======
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="62dp"
+                android:layout_marginBottom="26dp"
+                android:background="@drawable/btn_transparent"
+                android:fontFamily="cursive"
+                android:text="@string/indexHotelName"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
             <Button
                 android:id="@+id/button"
@@ -114,18 +168,36 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="10dp"
+<<<<<<< HEAD
                 android:layout_marginEnd="286dp"
                 android:layout_marginBottom="11dp"
                 android:background="@drawable/btn_transparent"
                 android:onClick="openCheckinPackage"
                 android:text="CHECKIN"
+=======
+                android:layout_marginEnd="159dp"
+                android:layout_marginBottom="28dp"
+                android:background="@drawable/badge_circle"
+
+                android:onClick="openCheckinPackage"
+
+
+                android:text="CHECKIN"
+                android:textAlignment="center"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textColor="@color/orange_transparent"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
                 android:textSize="14sp"
+                android:textStyle="bold"
                 android:typeface="normal" />
         </RelativeLayout>
 
+<<<<<<< HEAD
+=======
+        <!--android:onClick="openCheckinPackage"-->
+
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
         <!--<ImageView-->
         <!--android:id="@+id/imageView2"-->
@@ -167,6 +239,10 @@
         <!--/>-->
 
         <!--</LinearLayout>-->
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
         <Button
             android:id="@+id/langSelectButton"
             android:layout_width="122dp"
@@ -183,6 +259,7 @@
             tools:layout_editor_absoluteY="285dp" />
 
         <FrameLayout
+<<<<<<< HEAD
             android:layout_width="178dp"
             android:layout_height="56dp"
             android:layout_alignTop="@+id/langSelectButton"
@@ -192,6 +269,17 @@
             android:layout_marginTop="-9dp"
             android:layout_marginEnd="400dp"
             android:background="@drawable/d2glogo">
+=======
+            android:layout_width="101dp"
+            android:layout_height="79dp"
+            android:layout_alignTop="@+id/langSelectButton"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="855dp"
+            android:layout_marginTop="-13dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/d2gtiny">
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
         </FrameLayout>
 

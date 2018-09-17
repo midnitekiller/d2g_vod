@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "C:\\Users\\D2G\\Desktop\\QuensLand Setup\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar-rSA\\values-ar-rSA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\D2G\\Desktop\\QuensLand Setup\\app\\src\\main\\res\\values-ar-rSA\\strings.xml",
+=======
+            "outputFile": "C:\\Users\\D2G\\Desktop\\D2G V2 First Attemp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar-rSA\\values-ar-rSA.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\D2G\\Desktop\\D2G V2 First Attemp\\app\\src\\main\\res\\values-ar-rSA\\strings.xml",
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2",

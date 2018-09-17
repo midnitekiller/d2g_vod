@@ -10,9 +10,11 @@
         android:layout_height="550dp"
         android:background="@drawable/housekeepingmodal_bg"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/HousekeepingTitleS"
@@ -30,11 +32,19 @@
 
 
         <TextView
+<<<<<<< HEAD
             android:id="@+id/HousekeepingDateS"
+=======
+            android:id="@+id/checkinDateDialog"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_below="@+id/HousekeepingTitleS"
+            android:layout_alignParentStart="true"
+<<<<<<< HEAD
+            android:layout_below="@+id/HousekeepingTitleS"
+=======
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:layout_marginTop="32dp"
             android:text="Thu June 29 2017"
             android:textAlignment="center"
@@ -46,8 +56,12 @@
             android:id="@+id/HousekeepingStatusS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/checkinDateDialog"
             android:layout_alignParentStart="true"
+<<<<<<< HEAD
             android:layout_below="@+id/HousekeepingDateS"
+=======
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:layout_marginTop="11dp"
             android:text="Status: "
             android:textAlignment="center"
@@ -58,8 +72,12 @@
             android:id="@+id/CancelHouseKeeping"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_below="@+id/HousekeepingStatusS"
+            android:layout_alignParentStart="true"
+<<<<<<< HEAD
+            android:layout_below="@+id/HousekeepingStatusS"
+=======
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:layout_marginTop="14dp"
             android:text="Cancel Housekeeping"
             android:textAlignment="center"
@@ -72,7 +90,7 @@
             android:layout_height="60dp"
             android:layout_below="@+id/CancelHouseKeepingS"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="27dp"
+            android:layout_marginTop="235dp"
             android:background="@drawable/confirm_button"
             android:focusable="auto"
             android:focusableInTouchMode="true"
@@ -88,6 +106,10 @@
             android:layout_height="60dp"
             android:layout_below="@+id/TodayHKBtnS"
             android:layout_alignStart="@+id/TodayHKBtnS"
+<<<<<<< HEAD
+=======
+            android:layout_marginStart="-3dp"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:layout_marginTop="11dp"
             android:background="@drawable/confirm_button"
             android:focusable="auto"
@@ -101,8 +123,8 @@
             android:id="@+id/RequestHouseKeepingS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_below="@+id/WholeHKBtn"
+            android:layout_alignParentStart="true"
             android:layout_marginTop="10dp"
             android:text="Request Housekeeping"
             android:textAlignment="center"
@@ -113,9 +135,15 @@
             android:id="@+id/RequestHKBtnS"
             android:layout_width="300dp"
             android:layout_height="60dp"
+            android:layout_below="@+id/RequestHouseKeepingS"
             android:layout_alignStart="@+id/WholeHKBtn"
+<<<<<<< HEAD
             android:layout_below="@+id/RequestHouseKeepingS"
             android:layout_marginTop="12dp"
+=======
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-5dp"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:background="@drawable/confirm_button"
             android:focusable="auto"
             android:focusableInTouchMode="true"

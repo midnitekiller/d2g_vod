@@ -1,7 +1,11 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "C:\\Users\\D2G\\Desktop\\QuensLand Setup\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hy-rAM\\values-hy-rAM.xml",
+=======
+            "outputFile": "C:\\Users\\D2G\\Desktop\\D2G V2 First Attemp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hy-rAM\\values-hy-rAM.xml",
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             "map": [
                 {
                     "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.6.1.aar\\413b1a6be1e9b1844d9cc454fbdf66e8\\res\\values-hy-rAM\\values-hy-rAM.xml",

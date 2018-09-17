@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DownloadManager;
+import android.bluetooth.BluetoothClass;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,9 +15,12 @@ import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.provider.Settings.Secure;
+import android.support.annotation.StringRes;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -25,6 +29,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkError;
@@ -39,15 +45,33 @@ import com.direct2guests.d2g_tv.NonActivity.NetworkConnection;
 import com.direct2guests.d2g_tv.NonActivity.Variable;
 import com.direct2guests.d2g_tv.NonActivity.VolleyCallback;
 import com.direct2guests.d2g_tv.R;
+import com.google.api.client.http.HttpUnsuccessfulResponseHandler;
 
+import org.apache.http.HttpConnection;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+<<<<<<< HEAD
+=======
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Random;
 
+<<<<<<< HEAD
+=======
+import static com.direct2guests.d2g_tv.Activities.LauncherActivity.WATCHTV_FROM;
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 import static com.direct2guests.d2g_tv.Activities.MainLangActivity.LANG_SELECT_FROM;
 import static com.direct2guests.d2g_tv.NonActivity.Constant.ApiUrl;
 import static com.direct2guests.d2g_tv.NonActivity.Constant.ImgPlaces;
@@ -59,7 +83,11 @@ public class MainActivity extends LangSelectActivity {
     NetworkConnection nc = new NetworkConnection();
     Variable vdata = new Variable();
 
+<<<<<<< HEAD
 
+=======
+    private int HKFocus = 0;
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
     private String currentDateString;
     private TextView date_txtview;
 
@@ -71,6 +99,7 @@ public class MainActivity extends LangSelectActivity {
     TextView guestName;
     TextView welcomeTxtV;
     TextView deviceID;
+    TextView currentTime;
     private java.util.Calendar calendar;
     private String cmonth, chour, cminutes, versionName, appname;
     private int cyear, cday;
@@ -96,11 +125,14 @@ public class MainActivity extends LangSelectActivity {
 
     private String validated;
     private EditText roomnumber, hotelname;
-    private Button buttonValidate;
+    private Button buttonValidate, mainBttn;
+
+    private Button shortBttn, longBttn, promoBttn;
 
     private Button shortBttn, longBttn, promoBttn;
 
     private String api_url_used = "";
+    private String shortBttnUrl, longBttnUrl, promoBttnUrl, qlcheckURL01, qlcheckURL02, qlcheckURL03, qlcheckURL04, qlcheckURL05, qlcheckURL06;
 
     private String[] permissions = new String[]{
             Manifest.permission.INTERNET,
@@ -122,15 +154,18 @@ public class MainActivity extends LangSelectActivity {
     private EditText ipText;
     private RelativeLayout selectBack, inputBackIP;
 
-    private SharedPreferences preferenceSettings;
-    private SharedPreferences.Editor preferenceEditor;
+    private SharedPreferences preferenceSettings, preferenceSettingsTime;
+    private SharedPreferences.Editor preferenceEditor, preferenceEditorTime;
 
     private MediaPlayer backgroundMusic;
 
     private static final int PREFERENCE_MODE_PRIVATE = 0;
 
+<<<<<<< HEAD
 //    private Object v;
 //    static final int WAITTIME = 10000;
+=======
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
 
     @Override
@@ -148,18 +183,11 @@ public class MainActivity extends LangSelectActivity {
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
         //end code hide status bar
-        /*Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
-            @Override
-            public void uncaughtException(Thread paramThread, Throwable paramThrowable) {
-                Log.d("Error", "UncaughtException!!!");
-                System.exit(2);
-            }
-        });*/
 
 
         Bundle configBundle = new Bundle();
         try {
-            setContentView(R.layout.activity_main);
+            setContentView(R.layout.activity_main2nd);
         }catch (RuntimeException e){
             onCreate(configBundle);
         }
@@ -186,7 +214,10 @@ public class MainActivity extends LangSelectActivity {
         appname = "direct2guesttv.apk";
         downloadManager = (DownloadManager)getSystemService(Context.DOWNLOAD_SERVICE);
 
+<<<<<<< HEAD
 //        backgroundMusic = MediaPlayer.create(MainActivity.this,R.raw.jodel);
+=======
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
         Date date = new Date();
         DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.LONG);
@@ -201,13 +232,30 @@ public class MainActivity extends LangSelectActivity {
 
         shortBttn = findViewById(R.id.shortBttn);
         longBttn = findViewById(R.id.longBttn);
+<<<<<<< HEAD
         promoBttn = findViewById(R.id.promoBttn);
 
         preferenceSettings = getPreferences(PREFERENCE_MODE_PRIVATE);
+=======
+//        promoBttn = findViewById(R.id.promoBttn);
+
+        preferenceSettings = getSharedPreferences("occupied", MODE_PRIVATE);
+        preferenceSettingsTime = getSharedPreferences("checkintime", MODE_PRIVATE);
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
         changeBackground();
 
 
+<<<<<<< HEAD
+=======
+        currentTime = findViewById(R.id.dateTxtmain);
+
+        videoViewPlay();
+
+
+
+
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
     }
 
 
@@ -223,7 +271,13 @@ public class MainActivity extends LangSelectActivity {
         Log.d("DIR",getApplicationContext().getFilesDir()+"/d2g_support.apk");
 
 
+<<<<<<< HEAD
         changeBackground();
+=======
+        videoViewPlay();
+        changeBackground();
+
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
 
         if(preferenceSettings.contains("firstrun")){
@@ -273,6 +327,7 @@ public class MainActivity extends LangSelectActivity {
                                 vdata.setServerURL("http://"+preferenceSettings.getString("localip","192.168.1.8")+"/");
                                 bdialog.dismiss();
                                 checkBackendType();
+                                roomdata();
                             }
                         });
                     }
@@ -286,6 +341,7 @@ public class MainActivity extends LangSelectActivity {
                         vdata.setApiUrl(ApiUrl);
                         vdata.setServerURL(ServerUrl);
                         checkBackendType();
+                        roomdata();
                         bdialog.dismiss();
                     }
                 });
@@ -309,10 +365,12 @@ public class MainActivity extends LangSelectActivity {
                     vdata.setApiUrl(ApiUrl);
                     vdata.setServerURL(ServerUrl);
                     checkBackendType();
+                    roomdata();
                 }else{
                     vdata.setApiUrl("http://"+preferenceSettings.getString("localip","192.168.1.8")+"/api/");
                     vdata.setServerURL("http://"+preferenceSettings.getString("localip","192.168.1.8")+"/");
                     checkBackendType();
+                    roomdata();
                 }
             }
 
@@ -346,7 +404,10 @@ public class MainActivity extends LangSelectActivity {
                 }
             });
         }
+
     }
+
+
 
     @Override
     public void onResume(){
@@ -357,19 +418,26 @@ public class MainActivity extends LangSelectActivity {
         decorView.setSystemUiVisibility(uiOptions);
         //end code hide status bar
         changeBackground();
+<<<<<<< HEAD
 
+=======
+        videoViewPlay();
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
 
     }
 
     @Override
     public void onBackPressed(){
+<<<<<<< HEAD
         //super.onBackPressed();
         /*if(noupdate == 0) {
             unregisterReceiver(downloadReceiver);
         }*/
         Intent i = new Intent(MainActivity.this, MainActivity.class);
         startActivity(i);
+=======
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
 
     }
@@ -382,9 +450,7 @@ public class MainActivity extends LangSelectActivity {
     @Override
     public void onStop(){
         super.onStop();
-        /*if(noupdate == 0) {
-            unregisterReceiver(downloadReceiver);
-        }*/
+
     }
 
 
@@ -446,6 +512,8 @@ public class MainActivity extends LangSelectActivity {
                                 return false;
                             }
                         });
+
+
                         dialog.show();
 
                     }
@@ -537,8 +605,10 @@ public class MainActivity extends LangSelectActivity {
                         JSONObject hotel = response.getJSONObject("hotel");
                         String status = hotel.getString("hotel_status");
 
+
                         JSONArray access = response.getJSONArray("access");
                         JSONObject guest = response.getJSONObject("guest");
+
                         JSONArray restaurants = response.getJSONArray("restaurants");
                         JSONArray places_restaurants = response.getJSONObject("ads").getJSONArray("restaurant");
                         JSONArray places_activities = response.getJSONObject("ads").getJSONArray("activities");
@@ -555,7 +625,8 @@ public class MainActivity extends LangSelectActivity {
                         String guest_first_name = guest.getString("firstname");
                         String guest_last_name = guest.getString("lastname");
                         String guest_id = guest.getString("guest_ID");
-                        String room_number = guest.getString("room_no").toString();
+
+                        String room_number = guest.getString("room_no");
                         String check_in = guest.getString("check_in");
                         String check_out = guest.getString("check_out");
                         String hotel_logo = hotel.getString("full_image");
@@ -571,11 +642,12 @@ public class MainActivity extends LangSelectActivity {
 
                         vdata.setHotelID(hotelID);
                         hotelName.setText(hotel_name);
-                        guestName.setText(guest_first_name);
+                        guestName.setText(guest_first_name + " " + guest_last_name);
                         vdata.setHotelName(hotel_name);
                         vdata.setGuestFirstName(guest_first_name);
                         vdata.setGuestLastName(guest_last_name);
                         vdata.setGuestID(guest_id);
+
                         vdata.setRoomNumber(room_number);
                         vdata.setCheckIn(check_in);
                         vdata.setCheckOut(check_out);
@@ -585,16 +657,6 @@ public class MainActivity extends LangSelectActivity {
                         vdata.setWeatherid(weatherid);
                         vdata.setAirportid(airportid);
 
-
-                        // Chyll - for auto transition to other page
-                        /*new Timer().schedule(new TimerTask() {
-                            @Override
-                            public void run() {
-                                nextIntent();
-                            }
-                        }, 2000);
-
-*/
 
                     } else {
                         final Dialog dialog = new Dialog(MainActivity.this);
@@ -713,6 +775,7 @@ public class MainActivity extends LangSelectActivity {
         });
     }
 
+<<<<<<< HEAD
 //    public void nextIntent(){
 //        Intent i = new Intent(this, LauncherActivity.class);
 //        i.putExtra(Variable.EXTRA, vdata);
@@ -731,7 +794,14 @@ public class MainActivity extends LangSelectActivity {
 //        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.example.android.tvleanback");
 //        startActivity(launchIntent);
 //    }
+=======
 
+    public void continueButton(View view){
+        this.checkBackendType();
+        launcher_activity();
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
+
+    }
 
 
     private void setAds(JSONArray ads, String type){
@@ -980,18 +1050,6 @@ public class MainActivity extends LangSelectActivity {
         } catch (JSONException e) {
             Log.d("JSON DataPOSTException", e.getLocalizedMessage());
         }
-        /*nc.postdataObject(url, getApplicationContext(), data, new VolleyCallback() {
-            @Override
-            public void onSuccess(JSONObject response) {
-                //checkDevice();
-                Log.d("validated","");
-            }
-
-            @Override
-            public void onError(VolleyError error) {
-
-            }
-        });*/
 
         nc.postdataObject(url2, getApplicationContext(), data, new VolleyCallback() {
             @Override
@@ -1047,6 +1105,10 @@ public class MainActivity extends LangSelectActivity {
     public void launcher_activity(){
         Intent i = new Intent(this, LauncherActivity.class);
         i.putExtra(Variable.EXTRA, vdata);
+<<<<<<< HEAD
+=======
+        i.putExtra(WATCHTV_FROM, "main");
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
         startActivity(i);
     }
 
@@ -1084,6 +1146,7 @@ public class MainActivity extends LangSelectActivity {
 
     public void openCheckinPackage(View view){
 
+<<<<<<< HEAD
         this.checkBackendType();
 
         final Dialog dialog = new Dialog(this);
@@ -1095,10 +1158,45 @@ public class MainActivity extends LangSelectActivity {
         decorView.setSystemUiVisibility(uiOptions);
 
         dialog.show();
+=======
+//        Toast.makeText(getApplicationContext(), String.valueOf(vdata.getQLroomID()), Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), String.valueOf(vdata.getQLroomStatus()), Toast.LENGTH_LONG).show();
+
+        if(vdata.getQLroomStatus().equals("active")){
+            Toast.makeText(getApplicationContext(), "You are still checked In. Please Checkout", Toast.LENGTH_LONG).show();
+            launcher_activity();
+        }else {
+            final Dialog dialog = new Dialog(this);
+            dialog.setCancelable(true);
+            dialog.setCanceledOnTouchOutside(false);
+            dialog.setContentView(R.layout.checkin_type);
+            View decorView = getWindow().getDecorView();
+            int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+            decorView.setSystemUiVisibility(uiOptions);
+
+            promoBttn = dialog.findViewById(R.id.promoBttn);
+
+            promoBttn.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                @Override
+                public void onFocusChange(View view, boolean hasFocus) {
+                    if(hasFocus){
+                        view.setBackgroundTintList(getColorStateList(R.color.hkfocustint));
+                        HKFocus = 0;
+                    } else{
+                        view.setBackgroundTintList(getColorStateList(R.color.quantitybuttoncartblur));
+                    }
+
+                }
+            });
+
+            dialog.show();
+        }
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
 
     }
 
+<<<<<<< HEAD
     public void onClickShortTime(View view) {
 
         shortBttnUrl = vdata.getApiUrl() + "canceltodayhousekeeping.php?hotel_id=" + vdata.getHotelID() + "&guest_id=" + vdata.getGuestID();
@@ -1211,11 +1309,200 @@ public class MainActivity extends LangSelectActivity {
         });
 
         launcher_activity();
+=======
+
+    public void onClickPromoTime(View view){
+        qlcheckURL02 = vdata.getApiUrl() + "addroomactivity.php?room_id=" + vdata.getQLroomID();
+
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("CHECKIN")
+                        .setMessage("Press OK to CHECKIN!")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                HttpAsyncTask hat = new HttpAsyncTask();
+                                hat.execute(qlcheckURL02);
+                                timesession();
+                                launcher_activity();
+
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, null).show();
+    }
+
+
+
+
+    private class HttpAsyncTask extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... urls) {
+
+            return httpRequestResponse(urls[0]);
+        }
+        // onPostExecute displays the results of the AsyncTask.
+        @Override
+        protected void onPostExecute(String result) {
+
+        }
+    }
+
+    //For HttpAsync Functions: sending requests and receiving responses
+    public static String httpRequestResponse(String url){
+        InputStream inputStream = null;
+        String result = "";
+        try {
+            // create HttpClient
+            HttpClient httpclient = new DefaultHttpClient();
+
+            // make GET request to the given URL
+            HttpResponse httpResponse = httpclient.execute(new HttpGet(url));
+
+            // receive response as inputStream
+            inputStream = httpResponse.getEntity().getContent();
+
+            // convert InputStream to string
+            if(inputStream != null)
+                result = convertInputStreamToString(inputStream);
+            else
+                result = "InputStream did not work";
+
+        } catch (Exception e) {
+            Log.d("InputStream", e.getLocalizedMessage());
+        }
+
+        return result;
+    }
+
+    private static String convertInputStreamToString(InputStream inputStream) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
+        String line = "";
+        String result = "";
+        while((line = bufferedReader.readLine()) != null)
+            result += line;
+
+        inputStream.close();
+        return result;
+    }
+
+
+
+    public void timesession(){
+
+        preferenceSettingsTime.edit().clear().commit();
+        preferenceEditorTime = preferenceSettingsTime.edit();
+        preferenceEditorTime.putLong("checkintime", System.currentTimeMillis());
+        preferenceEditorTime.commit();
+    }
+
+    
+
+    public void roomdata(){
+        Log.d("API Url: ", vdata.getApiUrl().toString());
+        Log.d("Server Url: ", vdata.getServerURL().toString());
+        String url = vdata.getApiUrl() + "getroominfo.php?device_id=" + unique_id;
+        nc.getdataObject(url, getApplicationContext(), new VolleyCallback() {
+            @Override
+            public void onSuccess(JSONObject response) {
+//                Toast.makeText(getApplicationContext(), String.valueOf(url), Toast.LENGTH_LONG).show();
+                try {
+                    Boolean res = response.getBoolean("success");
+                    if(res){
+                        JSONObject roominfo = response.getJSONObject("roominfo");
+                        String qlroom_no = roominfo.getString("room_no");
+                        String qlroom_id = roominfo.getString("room_id");
+                        String qlroom_type = roominfo.getString("room_type");
+                        String qlroom_status = roominfo.getString("room_status");
+                        String qlroom_price = roominfo.getString("room_price");
+
+
+                        vdata.setQLroomID(qlroom_id);
+                        vdata.setQLroomNo(qlroom_no);
+                        vdata.setQLroomType(qlroom_type);
+                        vdata.setQLroomStatus(qlroom_status);
+                        vdata.setQLroomPrice(qlroom_price);
+
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    message = "Room is not assigned on this device.";
+                    AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                    alertDialog.setTitle("Device Not Assigned");
+                    alertDialog.setMessage(message);
+                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Okay",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                    alertDialog.setCanceledOnTouchOutside(false);
+                    alertDialog.show();
+                    alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+                        @Override
+                        public void onShow(DialogInterface dialogInterface) {
+                            View decorView = getWindow().getDecorView();
+                            int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+                            decorView.setSystemUiVisibility(uiOptions);
+                        }
+                    });
+                }
+
+            }
+
+            @Override
+            public void onError(VolleyError error) {
+                message = "Not Connected to Internet";
+                AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                alertDialog.setTitle("The device is not connected to Internet");
+                alertDialog.setMessage(message);
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Okay",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.setCanceledOnTouchOutside(false);
+                alertDialog.show();
+                alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+                    @Override
+                    public void onShow(DialogInterface dialogInterface) {
+                        View decorView = getWindow().getDecorView();
+                        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+                        decorView.setSystemUiVisibility(uiOptions);
+                    }
+                });
+            }
+        });
+    }
+
+    public void videoViewPlay(){
+
+        Resources res = getResources();
+        String[] ADS = res.getStringArray(R.array.myADS);
+        String randomStr = ADS[new Random().nextInt(ADS.length)];
+
+        VideoView videoView = findViewById(R.id.videoViewMain);
+
+        videoView.setVideoPath(String.valueOf(randomStr));
+
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+                videoView.start();
+            }
+        });
+
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
     }
 
 
 
+<<<<<<< HEAD
     // End Lang Select Method
 
+=======
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 }

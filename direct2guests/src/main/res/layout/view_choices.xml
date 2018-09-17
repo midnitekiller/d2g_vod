@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@drawable/ads10">
+=======
+    android:background="@drawable/ql2">
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
     <RelativeLayout
         android:layout_width="400dp"
@@ -51,6 +55,8 @@
                     android:textColor="@color/txtcolor"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+
+                <requestFocus />
 
                 <Button
                     android:id="@+id/vodBttn"

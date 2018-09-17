@@ -10,7 +10,11 @@
         android:id="@+id/placesRelativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+<<<<<<< HEAD
         android:background="@drawable/ads10"
+=======
+        android:background="@drawable/ql2"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">

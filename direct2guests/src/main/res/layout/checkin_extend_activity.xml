@@ -9,6 +9,7 @@
         android:id="@+id/showhouse"
         android:layout_width="510dp"
         android:layout_height="550dp"
+<<<<<<< HEAD
         android:background="@drawable/housekeepingmodal_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,11 +27,37 @@
             android:background="@drawable/confirm_button"
             android:focusable="auto"
             android:focusableInTouchMode="true"
+=======
+        android:background="@drawable/modal_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/exitBttn"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_alignBottom="@+id/HousekeepingTitleS"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="104dp"
+            android:layout_marginBottom="-376dp"
+            android:background="@drawable/confirm_button"
+            android:focusable="auto"
+            android:focusableInTouchMode="true"
+            android:onClick="onExitAcivity"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:text="EXIT"
             android:textColor="#fff"
             android:textSize="20sp"
             android:textStyle="bold"
+<<<<<<< HEAD
             android:visibility="gone" />
+=======
+            android:visibility="invisible" />
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 
         <TextView
             android:id="@+id/HousekeepingTitleS"
@@ -48,11 +75,19 @@
 
 
         <TextView
+<<<<<<< HEAD
             android:id="@+id/HousekeepingDateS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/HousekeepingTitleS"
+=======
+            android:id="@+id/checkinDateDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/HousekeepingTitleS"
+            android:layout_alignParentStart="true"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:layout_marginTop="32dp"
             android:text="Thu June 29 2017"
             android:textAlignment="center"
@@ -64,7 +99,11 @@
             android:id="@+id/HousekeepingStatusS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_below="@+id/HousekeepingDateS"
+=======
+            android:layout_below="@+id/checkinDateDialog"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:layout_alignParentStart="true"
             android:layout_marginStart="0dp"
             android:layout_marginTop="36dp"
@@ -88,16 +127,29 @@
             android:visibility="gone" />
 
         <Button
+<<<<<<< HEAD
             android:id="@+id/TodayHKBtnS"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_below="@+id/CancelHouseKeepingS"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="61dp"
+=======
+            android:id="@+id/extendBttn"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="228dp"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:background="@drawable/confirm_button"
             android:focusable="auto"
             android:focusableInTouchMode="true"
             android:focusedByDefault="true"
+<<<<<<< HEAD
+=======
+            android:onClick="onExtendActivity"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:text="EXTEND STAY"
             android:textColor="#fff"
             android:textSize="20sp"
@@ -117,6 +169,7 @@
             android:visibility="gone" />
 
         <Button
+<<<<<<< HEAD
             android:id="@+id/RequestHKBtnS"
             android:layout_width="300dp"
             android:layout_height="60dp"
@@ -126,6 +179,19 @@
             android:background="@drawable/confirm_button"
             android:focusable="auto"
             android:focusableInTouchMode="true"
+=======
+            android:id="@+id/checkoutBttn"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+
+            android:layout_below="@+id/HousekeepingStatusS"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="113dp"
+            android:background="@drawable/confirm_button"
+            android:focusable="auto"
+            android:focusableInTouchMode="true"
+            android:onClick="onCheckoutActivity"
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
             android:text="CHECKOUT"
             android:textColor="#fff"
             android:textSize="20sp"

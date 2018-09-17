@@ -3,6 +3,7 @@
 
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
     android:oneshot="false">
+<<<<<<< HEAD
     <item android:drawable="@drawable/ads01" android:duration="50" />
     <item android:drawable="@drawable/ads02" android:duration="50" />
     <item android:drawable="@drawable/ads03" android:duration="50" />
@@ -11,6 +12,12 @@
     <item android:drawable="@drawable/ads06" android:duration="50" />
     <item android:drawable="@drawable/ads07" android:duration="50" />
     <item android:drawable="@drawable/ads08" android:duration="50" />
+=======
+    <item android:drawable="@drawable/ql1" android:duration="50" />
+    <item android:drawable="@drawable/ql2" android:duration="50" />
+    <item android:drawable="@drawable/ql3" android:duration="50" />
+
+>>>>>>> 80e011ef5dd6f80c65b159266b5919b56e970646
 </animation-list>
 
 <!--<animation-list xmlns:android="http://schemas.android.com/apk/res/android">-->
