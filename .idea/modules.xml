@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/QuensLand Setup.iml" filepath="$PROJECT_DIR$/QuensLand Setup.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/d2g_vod.iml" filepath="$PROJECT_DIR$/d2g_vod.iml" />
       <module fileurl="file://$PROJECT_DIR$/direct2guests/direct2guests.iml" filepath="$PROJECT_DIR$/direct2guests/direct2guests.iml" />
     </modules>
   </component>

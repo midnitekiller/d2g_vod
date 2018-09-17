@@ -1,6 +1,6 @@
 package com.direct2guests.d2g_tv.Activities;
 
-import android.app.Activity;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
@@ -22,8 +22,6 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.ViewTreeObserver;
-import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -45,12 +43,10 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
 import com.direct2guests.d2g_tv.Activities.ChatActivity.FrontDeskChatActivity;
 import com.direct2guests.d2g_tv.NonActivity.NetworkConnection;
-import com.direct2guests.d2g_tv.NonActivity.RoundedCornersTransform;
 import com.direct2guests.d2g_tv.NonActivity.Variable;
 import com.direct2guests.d2g_tv.NonActivity.VolleyCallback;
 import com.direct2guests.d2g_tv.NonActivity.VolleyCallbackArray;
@@ -69,13 +65,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.direct2guests.d2g_tv.Activities.LauncherActivity.WATCHTV_FROM;
-import static com.direct2guests.d2g_tv.NonActivity.Constant.ApiBasePath;
-import static com.direct2guests.d2g_tv.NonActivity.Constant.ApiUrl;
-import static com.direct2guests.d2g_tv.NonActivity.Constant.ImgPath;
-import static com.direct2guests.d2g_tv.NonActivity.Constant.ServerUrl;
 import static java.lang.Integer.parseInt;
 
-public class HotelServicesActivity extends Activity {
+
+
+
+public class HotelServicesActivity extends LangSelectActivity {
     Variable vdata;
     NetworkConnection nc = new NetworkConnection();
     public final static String CLICK_FROM = "com.direct2guests.d2g_tv.CLICK_FROM";
@@ -169,8 +164,9 @@ public class HotelServicesActivity extends Activity {
     String fontPathRegCav = "fonts/CaviarDreams.ttf";
     String fontPathBoldCav = "fonts/CaviarDreams_Bold.ttf";
 
+    @SuppressLint("SetTextI18n")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //start code hide status bar
         View decorView = getWindow().getDecorView();
@@ -265,7 +261,7 @@ public class HotelServicesActivity extends Activity {
         welcomeguest_txtview.setTypeface(fontBoldRale);
 
         date_txtview.setText(currentDateString);
-        welcomeguest_txtview.setText("Hello " + vdata.getGuestFirstName() + "!");
+        welcomeguest_txtview.setText(getString(R.string.launcherHello) + " " + vdata.getGuestFirstName() + "!");
 
         access = vdata.getHotelAccess();
 //        Picasso.with(getApplicationContext()).load(vdata.getServerURL()+vdata.getHotelLogo()).into(hotelimg_view);
@@ -276,7 +272,7 @@ public class HotelServicesActivity extends Activity {
     }
 
     @Override
-    protected void onStart(){
+    public void onStart(){
         super.onStart();
         //start code hide status bar
         View decorView = getWindow().getDecorView();
@@ -337,7 +333,7 @@ public class HotelServicesActivity extends Activity {
     }
 
     @Override
-    protected void onResume(){
+    public void onResume(){
         super.onResume();
         //start code hide status bar
         View decorView = getWindow().getDecorView();
@@ -367,8 +363,15 @@ public class HotelServicesActivity extends Activity {
         /*Intent i = new Intent(this, LauncherActivity.class);
         i.putExtra(Variable.EXTRA, vdata);
         startActivity(i);*/
-        t.interrupt();
-        super.onBackPressed();
+//        t.interrupt();
+//        super.onBackPressed();
+
+        Intent i = new Intent(HotelServicesActivity.this, LauncherActivity.class);
+        i.putExtra(Variable.EXTRA, vdata);
+        i.putExtra(WATCHTV_FROM, "launcher");
+        startActivity(i);
+
+
     }
     public void onFocusFrames(){
         FrontdeskChat.setOnFocusChangeListener(new View.OnFocusChangeListener() {
@@ -568,15 +571,15 @@ public class HotelServicesActivity extends Activity {
         Typeface fontBold = Typeface.createFromAsset(getAssets(), fontPathBoldCav);
 
 
-        HKToday = dialog.findViewById(R.id.TodayHKBtn);
+        HKToday = dialog.findViewById(R.id.TodayHKBtnS);
         HKWhole = dialog.findViewById(R.id.WholeHKBtn);
-        HKRequest = dialog.findViewById(R.id.RequestHKBtn);
+        HKRequest = dialog.findViewById(R.id.RequestHKBtnS);
 
-        HKDate = dialog.findViewById(R.id.HousekeepingDate);
-        HKStatus = dialog.findViewById(R.id.HousekeepingStatus);
+        HKDate = dialog.findViewById(R.id.HousekeepingDateS);
+        HKStatus = dialog.findViewById(R.id.HousekeepingStatusS);
         HKCancelHouseKeeping = dialog.findViewById(R.id.CancelHouseKeeping);
-        HKTitle = dialog.findViewById(R.id.HousekeepingTitle);
-        HKKeeping = dialog.findViewById(R.id.RequestHouseKeeping);
+        HKTitle = dialog.findViewById(R.id.HousekeepingTitleS);
+        HKKeeping = dialog.findViewById(R.id.RequestHouseKeepingS);
 
         //Applying font
         HKToday.setTypeface(fontReg);
@@ -595,6 +598,7 @@ public class HotelServicesActivity extends Activity {
         urlRequestHK = vdata.getApiUrl() + "requesthousekeeping.php?hotel_id=" + vdata.getHotelID() + "&guest_id=" + vdata.getGuestID();
         urlGetStatus = vdata.getApiUrl() + "housekeepingstatus.php?hotel_id=" + vdata.getHotelID() + "&guest_id=" + vdata.getGuestID();
         nc.getdataObject(urlGetStatus, getApplicationContext(), new VolleyCallback() {
+
             @Override
             public void onSuccess(JSONObject response) {
                 try {
@@ -624,75 +628,75 @@ public class HotelServicesActivity extends Activity {
             @Override
             public void onClick(View v){
                 new AlertDialog.Builder(HotelServicesActivity.this)
-                    .setTitle("Confirm")
-                    .setMessage("Are you sure?")
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int whichButton) {
-                            nc.getdataObject(urlCancelToday, getApplicationContext(), new VolleyCallback() {
-                                @Override
-                                public void onSuccess(JSONObject response) {
-                                    HKStatus.setText("Status : Cancelled Today");
-                                }
+                        .setTitle("Confirm")
+                        .setMessage("Are you sure?")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                nc.getdataObject(urlCancelToday, getApplicationContext(), new VolleyCallback() {
+                                    @Override
+                                    public void onSuccess(JSONObject response) {
+                                        HKStatus.setText("Status : Cancelled Today");
+                                    }
 
-                                @Override
-                                public void onError(VolleyError error) {
-                                    Log.d("Cancel Today", error.getLocalizedMessage());
-                                    error.printStackTrace();
-                                }
-                            });
-                        }})
-                    .setNegativeButton(android.R.string.no, null).show();
+                                    @Override
+                                    public void onError(VolleyError error) {
+                                        Log.d("Cancel Today", error.getLocalizedMessage());
+                                        error.printStackTrace();
+                                    }
+                                });
+                            }})
+                        .setNegativeButton(android.R.string.no, null).show();
             }
         });
         HKWhole.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 new AlertDialog.Builder(HotelServicesActivity.this)
-                    .setTitle("Confirm")
-                    .setMessage("Are you sure?")
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int whichButton) {
-                            nc.getdataObject(urlCancelWhole, getApplicationContext(), new VolleyCallback() {
-                                @Override
-                                public void onSuccess(JSONObject response) {
-                                    HKStatus.setText("Status : Cancelled for Whole Stay");
-                                }
+                        .setTitle("Confirm")
+                        .setMessage("Are you sure?")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                nc.getdataObject(urlCancelWhole, getApplicationContext(), new VolleyCallback() {
+                                    @Override
+                                    public void onSuccess(JSONObject response) {
+                                        HKStatus.setText("Status : Cancelled for Whole Stay");
+                                    }
 
-                                @Override
-                                public void onError(VolleyError error) {
-                                    Log.d("Cancel WholeStay", error.getLocalizedMessage());
-                                    error.printStackTrace();
-                                }
-                            });
-                        }})
-                    .setNegativeButton(android.R.string.no, null).show();
+                                    @Override
+                                    public void onError(VolleyError error) {
+                                        Log.d("Cancel WholeStay", error.getLocalizedMessage());
+                                        error.printStackTrace();
+                                    }
+                                });
+                            }})
+                        .setNegativeButton(android.R.string.no, null).show();
             }
         });
         HKRequest.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 new AlertDialog.Builder(HotelServicesActivity.this)
-                    .setTitle("Confirm")
-                    .setMessage("Are you sure?")
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int whichButton) {
-                            nc.getdataObject(urlRequestHK, getApplicationContext(), new VolleyCallback() {
-                                @Override
-                                public void onSuccess(JSONObject response) {
-                                    HKStatus.setText("Status : Housekeeping Requested");
-                                }
+                        .setTitle("Confirm")
+                        .setMessage("Are you sure?")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                nc.getdataObject(urlRequestHK, getApplicationContext(), new VolleyCallback() {
+                                    @Override
+                                    public void onSuccess(JSONObject response) {
+                                        HKStatus.setText("Status : Housekeeping Requested");
+                                    }
 
-                                @Override
-                                public void onError(VolleyError error) {
-                                    Log.d("Request HK", error.getLocalizedMessage());
-                                    error.printStackTrace();
-                                }
-                            });
-                        }})
-                    .setNegativeButton(android.R.string.no, null).show();
+                                    @Override
+                                    public void onError(VolleyError error) {
+                                        Log.d("Request HK", error.getLocalizedMessage());
+                                        error.printStackTrace();
+                                    }
+                                });
+                            }})
+                        .setNegativeButton(android.R.string.no, null).show();
             }
         });
 

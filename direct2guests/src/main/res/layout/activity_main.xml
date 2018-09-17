@@ -10,11 +10,36 @@
         android:id="@+id/continueButton"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/background_lg"
+        android:background="@drawable/ads10"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="0dp">
 
+        <TextView
+            android:id="@+id/dateTxtmain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textClock"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/textClock"
+            android:paddingTop="0dp"
+            android:text="@string/launcherDate"
+            android:textAlignment="viewEnd"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            tools:ignore="RelativeOverlap" />
+
+        <TextClock
+            android:id="@+id/textClock"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="20dp"
+            android:text="textClock"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/uid"
@@ -68,17 +93,18 @@
 
             <TextView
                 android:id="@+id/hotelNameTxtV"
-                android:layout_width="449dp"
+                android:layout_width="359dp"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/button"
                 android:layout_alignParentStart="false"
                 android:layout_marginStart="10dp"
-                android:layout_marginBottom="29dp"
-                android:fontFamily="monospace"
+                android:layout_marginBottom="27dp"
+                android:fontFamily="cursive"
                 android:text="@string/indexHotelName"
                 android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="#fff"
-                android:textSize="40sp" />
+                android:textSize="45sp" />
 
             <Button
                 android:id="@+id/button"
@@ -91,8 +117,8 @@
                 android:layout_marginEnd="286dp"
                 android:layout_marginBottom="11dp"
                 android:background="@drawable/btn_transparent"
-                android:onClick="continueButton"
-                android:text="@string/indexContinueButton"
+                android:onClick="openCheckinPackage"
+                android:text="CHECKIN"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="@color/orange_transparent"
@@ -100,29 +126,78 @@
                 android:typeface="normal" />
         </RelativeLayout>
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/montebello"
-            android:visibility="gone" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView2"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginEnd="20dp"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:src="@drawable/montebello"-->
+        <!--android:visibility="gone" />-->
 
         <!--<ImageButton-->
-            <!--android:id="@+id/imageButton"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_alignParentEnd="true"-->
-            <!--android:layout_alignParentBottom="true"-->
-            <!--android:layout_marginEnd="194dp"-->
-            <!--android:layout_marginBottom="199dp"-->
-            <!--android:onClick="vodButton"-->
-            <!--android:src="@drawable/common_google_signin_btn_text_dark_normal_background" />-->
+        <!--android:id="@+id/imageButton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginEnd="194dp"-->
+        <!--android:layout_marginBottom="199dp"-->
+        <!--android:onClick="vodButton"-->
+        <!--android:src="@drawable/common_google_signin_btn_text_dark_normal_background" />-->
+
+
+        <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="10dp"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<Spinner-->
+        <!--android:id="@+id/spinner1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:entries="@array/lang_select"-->
+        <!--android:prompt="@string/language_setting"-->
+        <!--android:padding="10dp"-->
+        <!--/>-->
+
+        <!--</LinearLayout>-->
+        <Button
+            android:id="@+id/langSelectButton"
+            android:layout_width="122dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="442dp"
+            android:background="@drawable/btn_transparent"
+            android:onClick="langSelect"
+            android:text="@string/langText"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="669dp"
+            tools:layout_editor_absoluteY="285dp" />
+
+        <FrameLayout
+            android:layout_width="178dp"
+            android:layout_height="56dp"
+            android:layout_alignTop="@+id/langSelectButton"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="382dp"
+            android:layout_marginTop="-9dp"
+            android:layout_marginEnd="400dp"
+            android:background="@drawable/d2glogo">
+
+        </FrameLayout>
 
     </RelativeLayout>
+
+
 
 
 </android.support.constraint.ConstraintLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.direct2guests.d2g_tv.Activities.LaunchTMActivity">
+
+    <RelativeLayout
+        android:id="@+id/tm_launcher_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/darkhotelbg2"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/launcherTMWelcometxt"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/dateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relativeLayout"
+            android:layout_marginEnd="25dp"
+            android:layout_toStartOf="@+id/textClock"
+            android:text="@string/launcherDate"
+            android:textAlignment="viewEnd"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            tools:ignore="RelativeOverlap" />
+
+        <TextClock
+            android:id="@+id/textClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relativeLayout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="54dp"
+            android:textSize="30sp" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="50dp">
+
+
+            <FrameLayout
+                android:id="@+id/tm_chanFrame"
+                android:layout_width="226dp"
+                android:layout_height="173dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="235dp"
+                android:layout_marginTop="149dp">
+
+                <ImageButton
+                    android:id="@+id/tm_chanBttn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_round" />
+
+                <ImageView
+                    android:id="@+id/tm_tvicon"
+                    android:layout_width="153dp"
+                    android:layout_height="102dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/tv_icon" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/tm_vodFrame"
+                android:layout_width="226dp"
+                android:layout_height="173dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="506dp"
+                android:layout_marginTop="149dp">
+                <ImageButton
+                    android:id="@+id/tm_vodBttn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_round" />
+
+                <ImageView
+                    android:id="@+id/tm_vodicon"
+                    android:layout_width="153dp"
+                    android:layout_height="102dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="20dp"
+
+                    android:src="@drawable/freemovie" />
+
+                <!--android:onClick="tm_vod_activity"-->
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -32,7 +32,6 @@
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -56,7 +55,20 @@
         <activity android:name=".Activities.OffersDetailsActivity" />
         <activity android:name=".Activities.ChannelListActivity" />
         <activity android:name=".Activities.FlightTrackerActivity" />
-        <activity android:name=".Activities.FaqActivity"></activity>
+        <activity android:name=".Activities.FaqActivity" />
+        <activity android:name=".Activities.LangSelectActivity">
+            <intent-filter>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.MainLangActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

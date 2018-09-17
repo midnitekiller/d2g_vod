@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/showhouse"
+        android:layout_width="510dp"
+        android:layout_height="550dp"
+        android:background="@drawable/housekeepingmodal_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/WholeHKBtnS"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/RequestHKBtnS"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="104dp"
+            android:background="@drawable/confirm_button"
+            android:focusable="auto"
+            android:focusableInTouchMode="true"
+            android:text="EXIT"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/HousekeepingTitleS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#bb000000"
+            android:padding="20dp"
+            android:text="Extend/Checkout"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/HousekeepingDateS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/HousekeepingTitleS"
+            android:layout_marginTop="32dp"
+            android:text="Thu June 29 2017"
+            android:textAlignment="center"
+            android:textColor="#393939"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/HousekeepingStatusS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/HousekeepingDateS"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="36dp"
+            android:text="Status: "
+            android:textAlignment="center"
+            android:textColor="#393939"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/CancelHouseKeepingS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/HousekeepingStatusS"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="55dp"
+            android:text="Extend Stay"
+            android:textAlignment="center"
+            android:textColor="#393939"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/TodayHKBtnS"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/CancelHouseKeepingS"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="61dp"
+            android:background="@drawable/confirm_button"
+            android:focusable="auto"
+            android:focusableInTouchMode="true"
+            android:focusedByDefault="true"
+            android:text="EXTEND STAY"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/RequestHouseKeepingS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:text="Checkout"
+            android:textAlignment="center"
+            android:textColor="#393939"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/RequestHKBtnS"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+
+            android:layout_below="@+id/TodayHKBtnS"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/confirm_button"
+            android:focusable="auto"
+            android:focusableInTouchMode="true"
+            android:text="CHECKOUT"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,7 +1,6 @@
 package com.direct2guests.d2g_tv.Activities;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DownloadManager;
@@ -45,18 +44,24 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.Random;
 
+import static com.direct2guests.d2g_tv.Activities.MainLangActivity.LANG_SELECT_FROM;
 import static com.direct2guests.d2g_tv.NonActivity.Constant.ApiUrl;
 import static com.direct2guests.d2g_tv.NonActivity.Constant.ImgPlaces;
 import static com.direct2guests.d2g_tv.NonActivity.Constant.ServerUrl;
 import static com.direct2guests.d2g_tv.NonActivity.Constant.apkPath;
-import static java.lang.Thread.sleep;
 
-public class MainActivity extends Activity {
+
+public class MainActivity extends LangSelectActivity {
     NetworkConnection nc = new NetworkConnection();
     Variable vdata = new Variable();
+
+
+    private String currentDateString;
+    private TextView date_txtview;
 
     String unique_id;
     String message;
@@ -93,6 +98,8 @@ public class MainActivity extends Activity {
     private EditText roomnumber, hotelname;
     private Button buttonValidate;
 
+    private Button shortBttn, longBttn, promoBttn;
+
     private String api_url_used = "";
 
     private String[] permissions = new String[]{
@@ -104,7 +111,14 @@ public class MainActivity extends Activity {
             Manifest.permission.RECORD_AUDIO,
     };
 
-    private Button localButton, liveButton, goButton;
+
+    // For Language Selection method
+
+    // End Lang Select
+
+
+
+    private Button localButton, liveButton, goButton, langButton;
     private EditText ipText;
     private RelativeLayout selectBack, inputBackIP;
 
@@ -114,13 +128,20 @@ public class MainActivity extends Activity {
     private MediaPlayer backgroundMusic;
 
     private static final int PREFERENCE_MODE_PRIVATE = 0;
+
 //    private Object v;
 //    static final int WAITTIME = 10000;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // For Lang Select Method
+        langButton = findViewById(R.id.langSelectButton);
+        // End of Lang Select Method
+
+
 
         //start code hide status bar
         View decorView = getWindow().getDecorView();
@@ -165,33 +186,30 @@ public class MainActivity extends Activity {
         appname = "direct2guesttv.apk";
         downloadManager = (DownloadManager)getSystemService(Context.DOWNLOAD_SERVICE);
 
-        backgroundMusic = MediaPlayer.create(MainActivity.this,R.raw.jodel);
+//        backgroundMusic = MediaPlayer.create(MainActivity.this,R.raw.jodel);
+
+        Date date = new Date();
+        DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.LONG);
+        currentDateString = dateFormat.format(date);
+        date_txtview = findViewById(R.id.dateTxtmain);
+        date_txtview.setText(currentDateString);
+
 
         roomnumber = new EditText(this);
         hotelname = new EditText(this);
 
+
+        shortBttn = findViewById(R.id.shortBttn);
+        longBttn = findViewById(R.id.longBttn);
+        promoBttn = findViewById(R.id.promoBttn);
+
         preferenceSettings = getPreferences(PREFERENCE_MODE_PRIVATE);
-
-//        //Dynamic Background
-//
-//            final RelativeLayout background = (RelativeLayout) findViewById(R.id.continueButton);
-//            Resources res = getResources();
-//            final TypedArray myImages = res.obtainTypedArray(R.array.myImages);
-//            final Random  random = new Random();
-//            int randomInt = random.nextInt(myImages.length());
-//            int drawableID = myImages.getResourceId(randomInt, -1);
-//            background.setBackgroundResource(drawableID);
-//
-//        // End of Dynamic Background
-
 
         changeBackground();
 
 
-
-
-
     }
+
 
     @Override
     protected void onStart(){
@@ -204,8 +222,8 @@ public class MainActivity extends Activity {
         unique_id = Secure.getString(getApplicationContext().getContentResolver(), Secure.ANDROID_ID);
         Log.d("DIR",getApplicationContext().getFilesDir()+"/d2g_support.apk");
 
-//        backgroundMusic.start();
-//        backgroundMusic.setLooping(true);
+
+        changeBackground();
 
 
         if(preferenceSettings.contains("firstrun")){
@@ -331,15 +349,14 @@ public class MainActivity extends Activity {
     }
 
     @Override
-    protected void onResume(){
+    public void onResume(){
         super.onResume();
         //start code hide status bar
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
         //end code hide status bar
-//        backgroundMusic.start();
-//        backgroundMusic.setLooping(true);
+        changeBackground();
 
 
 
@@ -351,6 +368,10 @@ public class MainActivity extends Activity {
         /*if(noupdate == 0) {
             unregisterReceiver(downloadReceiver);
         }*/
+        Intent i = new Intent(MainActivity.this, MainActivity.class);
+        startActivity(i);
+
+
     }
 
     @Override
@@ -692,17 +713,18 @@ public class MainActivity extends Activity {
         });
     }
 
-    public void nextIntent(){
-        Intent i = new Intent(this, LauncherActivity.class);
-        i.putExtra(Variable.EXTRA, vdata);
-        startActivity(i);
-    }
+//    public void nextIntent(){
+//        Intent i = new Intent(this, LauncherActivity.class);
+//        i.putExtra(Variable.EXTRA, vdata);
+//        startActivity(i);
+//    }
 
     public void continueButton(View view){
-        backgroundMusic.pause();
+//        backgroundMusic.pause();
         this.checkBackendType();
         //nextIntent();
-        hotelservices_activity();
+//        hotelservices_activity();
+        launcher_activity();
     }
 
 //    public void vodButton(View view){
@@ -1022,19 +1044,178 @@ public class MainActivity extends Activity {
         startActivity(i);
     }
 
+    public void launcher_activity(){
+        Intent i = new Intent(this, LauncherActivity.class);
+        i.putExtra(Variable.EXTRA, vdata);
+        startActivity(i);
+    }
+
     public void changeBackground(){
         //Dynamic Background
 
         final RelativeLayout background = (RelativeLayout) findViewById(R.id.continueButton);
         Resources res = getResources();
         final TypedArray myImages = res.obtainTypedArray(R.array.myImages);
-        final Random  random = new Random();
+        final Random random = new Random();
         int randomInt = random.nextInt(myImages.length());
         int drawableID = myImages.getResourceId(randomInt, -1);
         background.setBackgroundResource(drawableID);
 
-        // End of Dynamic Background
+
+
     }
 
+    // End of Dynamic Background
+
+
+
+
+    // For Lang Select Method
+    public void langSelect(View view){
+        Intent launchIntent = new Intent(this, MainLangActivity.class);
+        launchIntent.putExtra(Variable.EXTRA, vdata);
+        launchIntent.putExtra(LANG_SELECT_FROM, "launcher");
+        startActivity(launchIntent);
+    }
+
+
+
+
+
+    public void openCheckinPackage(View view){
+
+        this.checkBackendType();
+
+        final Dialog dialog = new Dialog(this);
+        dialog.setCancelable(true);
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.setContentView(R.layout.checkin_type);
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+
+        dialog.show();
+
+
+    }
+
+    public void onClickShortTime(View view) {
+
+        shortBttnUrl = vdata.getApiUrl() + "canceltodayhousekeeping.php?hotel_id=" + vdata.getHotelID() + "&guest_id=" + vdata.getGuestID();
+
+        shortBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Confirm")
+                        .setMessage("Booking for Short Time Package?")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                nc.getdataObject(urlCancelWhole, getApplicationContext(), new VolleyCallback() {
+                                    @Override
+                                    public void onSuccess(JSONObject response) {
+//
+
+
+                                    }
+
+                                    @Override
+                                    public void onError(VolleyError error) {
+                                        Log.d("Cancel WholeStay", error.getLocalizedMessage());
+                                        error.printStackTrace();
+                                    }
+                                });
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, null).show();
+
+
+            }
+
+        });
+
+        launcher_activity();
+    }
+
+
+    public void onClickPromoTime(View view){
+        promoBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Confirm")
+                        .setMessage("Booking for Short Time Package?")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                nc.getdataObject(urlCancelWhole, getApplicationContext(), new VolleyCallback() {
+                                    @Override
+                                    public void onSuccess(JSONObject response) {
+//
+
+
+                                    }
+
+                                    @Override
+                                    public void onError(VolleyError error) {
+                                        Log.d("Cancel WholeStay", error.getLocalizedMessage());
+                                        error.printStackTrace();
+                                    }
+                                });
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, null).show();
+
+
+            }
+
+        });
+
+        launcher_activity();
+
+    }
+
+    public void onClickLongTime(View view){
+
+        longBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Confirm")
+                        .setMessage("Booking for Short Time Package?")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                nc.getdataObject(urlCancelWhole, getApplicationContext(), new VolleyCallback() {
+                                    @Override
+                                    public void onSuccess(JSONObject response) {
+//
+
+
+                                    }
+
+                                    @Override
+                                    public void onError(VolleyError error) {
+                                        Log.d("Cancel WholeStay", error.getLocalizedMessage());
+                                        error.printStackTrace();
+                                    }
+                                });
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, null).show();
+
+
+            }
+
+        });
+
+        launcher_activity();
+
+    }
+
+
+
+    // End Lang Select Method
 
 }

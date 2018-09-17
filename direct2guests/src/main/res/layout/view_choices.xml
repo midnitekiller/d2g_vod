@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_lg">
+    android:background="@drawable/ads10">
 
     <RelativeLayout
         android:layout_width="400dp"
@@ -13,49 +13,59 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:background="#456672"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <!--android:background="#456672"-->
 
 
         <RelativeLayout
             android:id="@+id/viewSwitch"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/btn_transparent"
             android:visibility="visible">
 
             <RelativeLayout
-                android:layout_width="350dp"
-                android:layout_height="100dp"
+                android:layout_width="353dp"
+                android:layout_height="76dp"
                 android:layout_below="@+id/textView4"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal">
 
                 <Button
+
                     android:id="@+id/chanBttn"
-                    android:layout_width="135dp"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="false"
-                    android:layout_centerVertical="true"
+                    android:layout_width="134dp"
+                    android:layout_height="58dp"
+                    android:layout_alignParentTop="true"
                     android:layout_marginRight="20dp"
+                    android:background="@drawable/img"
                     android:padding="20dp"
-                    android:text="Channels"
+                    android:text="@string/formChanBttn"
+                    android:textColor="@color/txtcolor"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/vodBttn"
-                    android:layout_width="135dp"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
+                    android:layout_width="134dp"
+                    android:layout_height="58dp"
+                    android:layout_alignParentTop="true"
                     android:layout_toRightOf="@+id/chanBttn"
+                    android:background="@drawable/img"
                     android:padding="20dp"
-                    android:text="Movies"
+                    android:text="@string/formVODBttn"
+                    android:textColor="@color/txtcolor"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+
+
             </RelativeLayout>
 
             <TextView
@@ -64,9 +74,23 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
-                android:text="View Choices"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/btn_transparent"
+                android:text="@string/formViewChoices"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/formViewChoices"
                 android:textColor="#fff"
                 android:textSize="20sp"
                 android:textStyle="bold" />

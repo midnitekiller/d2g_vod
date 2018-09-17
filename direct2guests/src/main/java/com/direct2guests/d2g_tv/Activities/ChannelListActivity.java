@@ -2,11 +2,14 @@ package com.direct2guests.d2g_tv.Activities;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.android.volley.VolleyError;
 import com.direct2guests.d2g_tv.NonActivity.ChannelListAdapter;
@@ -23,6 +26,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import static com.direct2guests.d2g_tv.NonActivity.Constant.ApiBasePath;
 import static com.direct2guests.d2g_tv.NonActivity.Constant.ApiUrl;
@@ -110,7 +116,7 @@ public class ChannelListActivity extends Activity {
                             channel_adapter.setPosition(i);
                             channel_adapter.notifyDataSetChanged();
 
-                        
+                            changeBackground();
                         }
 
                         @Override
@@ -139,5 +145,24 @@ public class ChannelListActivity extends Activity {
         }catch (JSONException je){je.printStackTrace();}
         return  aList;
     }
+
+
+
+
+    public void changeBackground(){
+        //Dynamic Background
+
+        final RelativeLayout background = findViewById(R.id.ListLayout);
+        Resources res = getResources();
+        final TypedArray myImages = res.obtainTypedArray(R.array.chanListBackground);
+        final Random random = new Random();
+        int randomInt = random.nextInt(myImages.length());
+        int drawableID = myImages.getResourceId(randomInt, -1);
+        background.setBackgroundResource(drawableID);
+
+        // End of Dynamic Background
+    }
+
+
 
 }

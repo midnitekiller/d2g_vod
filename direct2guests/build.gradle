@@ -18,6 +18,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     // add: Prevent errors in "Generate Signed APK"
     lintOptions {
         checkReleaseBuilds false
@@ -44,9 +48,7 @@ dependencies {
     implementation 'com.github.lguipeng:BubbleView:1.0.1'
     implementation 'com.google.android.gms:play-services-analytics:10.2.4'
     implementation 'com.google.apis:google-api-services-translate:v2-rev51-1.23.0'
-
+    implementation 'com.akexorcist:localizationactivity:1.2.2'
+//    implementation project(path: ':app', configuration: 'default')
 
 }
-
-
-
