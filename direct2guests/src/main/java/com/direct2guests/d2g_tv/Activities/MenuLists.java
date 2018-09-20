@@ -360,6 +360,11 @@ public class MenuLists extends Activity {
 
     private void loadRestaurantMenu(){
         url_restaurants = vdata.getApiUrl() + "menu.php?hotel_id=" + vdata.getHotelID() + "&restaurant_id=" + restoID;
+
+
+        //url_restaurants  = vdata.getApiUrl() + "menu_translation_" + restoID  + "_" +  vdata.getHotelID() + "_ko.json";
+
+
         Log.d("URL", url_restaurants);
         nc.getdataArray(url_restaurants, getApplicationContext(), new VolleyCallbackArray() {
             @Override

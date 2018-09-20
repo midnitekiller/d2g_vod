@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\D2G\\Desktop\\D2G V2 First Attemp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
+            "outputFile": "C:\\Users\\D2G\\Desktop\\D2GV2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
             "map": [
                 {
                     "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.6.1.aar\\413b1a6be1e9b1844d9cc454fbdf66e8\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -38,6 +38,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\D2G\\Desktop\\D2GV2\\app\\src\\main\\res\\values-zh-rCN\\strings.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "2",
+                        "startOffsets": "53",
+                        "endColumns": "36",
+                        "endOffsets": "87"
+                    },
+                    "to": {
+                        "startLines": "32",
+                        "startColumns": "4",
+                        "startOffsets": "2669",
+                        "endColumns": "38",
+                        "endOffsets": "2703"
+                    }
+                },
+                {
                     "source": "D:\\Direct2Guests-Workstation\\Lief Filez\\ExoPlayer\\caches\\transforms-1\\files-1.1\\leanback-v17-27.0.0.aar\\2045e2bf9c2d5d562bd4efbe5c571f5b\\res\\values-zh-rCN\\values-zh-rCN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40",
@@ -52,23 +69,6 @@
                         "startOffsets": "2708,2817,2920,3012,3102,3215,3316,3411,3500,3610,3719,3814,3927,4034,4142,4248,4345,4433,4539,4625,4722,4817,4914,5003,5110,5203,5305,5406,5501,5600,5698,5802,5898,6000,6087,6167,6260,6390,6538",
                         "endColumns": "108,102,91,89,112,100,94,88,109,108,94,112,106,107,105,96,87,105,85,96,94,96,88,106,92,101,100,94,98,97,103,95,101,86,79,92,129,147,80",
                         "endOffsets": "2812,2915,3007,3097,3210,3311,3406,3495,3605,3714,3809,3922,4029,4137,4243,4340,4428,4534,4620,4717,4812,4909,4998,5105,5198,5300,5401,5496,5595,5693,5797,5893,5995,6082,6162,6255,6385,6533,6614"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\D2G\\Desktop\\D2G V2 First Attemp\\app\\src\\main\\res\\values-zh-rCN\\strings.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "2",
-                        "startOffsets": "53",
-                        "endColumns": "36",
-                        "endOffsets": "87"
-                    },
-                    "to": {
-                        "startLines": "32",
-                        "startColumns": "4",
-                        "startOffsets": "2669",
-                        "endColumns": "38",
-                        "endOffsets": "2703"
                     }
                 }
             ]

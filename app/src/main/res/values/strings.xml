@@ -16,8 +16,8 @@
 -->
 
 <resources>
-  <string name="app_name"><![CDATA[Videos On Demand]]></string>
-  <string name="browse_title"><![CDATA[Videos On Demand]]></string>
+  <string name="app_name"><![CDATA[D2G VOD]]></string>
+  <string name="browse_title"><![CDATA[D2G VOD]]></string>
   <string name="related_movies">Related Videos</string>
   <string name="vertical_grid_title"><![CDATA[Video Grid]]></string>
 
@@ -98,10 +98,10 @@
   <string name="mobile_welcome_description">Welcome to the Leanback Sample app! Try opening this on an Android TV for a great leanback experience.</string>
 
   <!-- Strings related to onboarding -->
-  <string name="onboarding_title_welcome">Welcome to Videos Page</string>
-  <string name="onboarding_title_design">Designed for your TV</string>
-  <string name="onboarding_title_simple">Integrate your videos now</string>
-  <string name="onboarding_title_project">Check out the movies</string>
+  <string name="onboarding_title_welcome">Welcome to D2G VOD</string>
+  <string name="onboarding_title_design">Designed for your personal Entertainment</string>
+  <string name="onboarding_title_simple">Integrating videos now</string>
+  <string name="onboarding_title_project">Enjoy</string>
 
   <string name="onboarding_description_welcome">This is the first the the app executes</string>
   <string name="onboarding_description_design">The Leanback sample shows how to quickly design apps designed for a 10-foot user interface</string>
